@@ -1,0 +1,41 @@
+{
+  " =========== Deposit =========== ": "",
+  "depositCrypto": "Deposit Crypto",
+  "depCryptoDescription": "Experience seamless transactions with our secure process.",
+  "depositFiat": "Deposit Fiat",
+  "depFiatDescription": "Safely deposit fiat for financial empowerment.",
+  "selectCoin": "Select Coin",
+  "network": "Network",
+  "depositAddress": "Deposit Address",
+  "getAddress": "Get Address",
+  "enterAmount": "Enter Amount",
+  "paymentMethod": "Payment Method",
+
+  " =========== Withdraw =========== ": "",
+  "withdraw": "Withdraw",
+  "withdrawDescription": "Safely retrieve your funds from your account balance. Ensure your financial freedom with our secure withdrawal process",
+  "withdrawCrypto": "Withdraw Crypto",
+  "withdrawFiat": "Withdraw Fiat",
+  "withdrawAddress": "Withdraw Address",
+  "address": "Address",
+  "amount": "Amount",
+  "transactionWarning": "Before you confirm the transaction, please double check the Network information.",
+  "chooseCard": "Choose Card",
+
+  " ========== Send Crypto ========== ": "",
+  "sendCrypto": "Send Crypto",
+  "sendCryptoDescription": "Easily send cryptocurrencies to anyone, anywhere in the world, with our secure and fast transfer system.",
+  "recipientId": "Please Enter Recipient's ID",
+
+  " ========== Transaction Overview =========== ": "",
+  "transactionOverview": "Transaction Overview",
+  "transactionDetails": "Transaction Details",
+  "amountWithdrawing": "Amount Withdrawing",
+  "rate": "Rate",
+  "transactionFee": "Transaction Fee",
+  "walletAddress": "Wallet Address",
+  "cancelTransaction": "Are you sure you want to cancel the transaction?",
+
+  " ========== Common ========== ": "",
+  "done": "Done"
+}

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Helvetica-400";
+  src: url("nordom-ui/dist/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"),
+    url("nordom-ui/dist/fonts/HelveticaNowDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-500";
+  src: url("nordom-ui/dist/fonts/HelveticaNowDisplay-Medium.woff2") format("woff2"),
+    url("nordom-ui/dist/fonts/HelveticaNowDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-700";
+  src: url("nordom-ui/dist/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"),
+    url("nordom-ui/dist/fonts/HelveticaNowDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-800";
+  src: url("nordom-ui/dist/fonts/HelveticaNowDisplay-ExtraBold.woff2") format("woff2"),
+    url("nordom-ui/dist/fonts/HelveticaNowDisplay-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}

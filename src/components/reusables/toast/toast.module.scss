@@ -1,0 +1,24 @@
+@import "@/scss/helpers";
+
+.container {
+  max-width: 416px;
+  max-height: 90px;
+  overflow: hidden;
+  .closeIconWrapper {
+    cursor: pointer;
+  }
+  .bellIconWrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $nord850;
+    padding: 8px;
+  }
+  .truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

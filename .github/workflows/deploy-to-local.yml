@@ -1,0 +1,35 @@
+name: Deploy To Local
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint Project
+        run: npm run lint
+
+      - name: Unit Tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to local server
+        run: |
+          rsync -avz --delete dist/ /var/www/nordom-web-app/

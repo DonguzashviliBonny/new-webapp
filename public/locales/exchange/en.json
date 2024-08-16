@@ -1,0 +1,22 @@
+{
+  "buyCrypto": "Buy Crypto",
+  "buyDescription": "Start investing in cryptocurrencies today with just a few clicks",
+  "convertCoins": "Convert Coins",
+  "convertDescription": "Start converting cryptocurrencies today with just a few clicks.",
+  "buy": "Buy",
+  "sell": "Sell",
+  "spend": "Spend",
+  "receive": "Receive",
+  "convert": "Convert",
+
+  " ========== Transaction Overview ========== ": "",
+
+  "transactionOverview": "Transaction Overview",
+  "spending": "Spending",
+  "rate": "Rate",
+  "transactionFee": "Transaction Fee",
+  "youReceive": "you Receive",
+
+  "cancel": "Cancel",
+  "confirm": "Confirm"
+}

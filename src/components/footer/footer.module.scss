@@ -1,0 +1,118 @@
+@import "@/scss/helpers.scss";
+
+.container {
+  padding: 40px 0;
+
+  @include media(tablet) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  @include media(laptop) {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+
+  @include media(desktop) {
+    padding-top: 64px;
+    padding-bottom: 104px;
+  }
+}
+
+.layout {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.listContainer {
+  width: 100%;
+  > div:nth-last-child(n + 4) {
+    height: auto;
+  }
+
+  @include media(laptop) {
+    > div:nth-last-child(n + 4) {
+      height: 284px;
+    }
+  }
+}
+
+.footerRightSection {
+  max-width: unset;
+
+  @include media(laptop) {
+    max-width: 308px;
+    width: 100%;
+  }
+}
+
+.widthFull {
+  width: 100%;
+}
+
+.collapseTexts {
+  color: $nord50;
+}
+
+.collapseTitle {
+  font-family: "Helvetica-700";
+}
+
+.collapseListItem {
+  &:first-child {
+    margin-top: 12px;
+  }
+}
+
+.collapseListItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.channels {
+  .channelsIcons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    a {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include media(laptop) {
+      width: 190px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+  }
+}
+
+.loginSection {
+  width: 100%;
+  .title {
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+  @include media(tablet) {
+    height: 40px;
+  }
+}
+
+.titleLists {
+  max-width: unset;
+  width: 100%;
+
+  @include media(laptop) {
+    max-width: 180px;
+  }
+
+  @include media(desktop) {
+    max-width: 200px;
+  }
+}

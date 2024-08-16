@@ -1,0 +1,126 @@
+@import "@/scss/helpers.scss";
+
+.headerContainer {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: $nord950;
+  border-bottom: $border_base_1 $nord800;
+
+  .header {
+    padding: 16px;
+
+    @include media(laptop) {
+      padding-block: unset;
+    }
+
+    @include media(tablet) {
+      padding-inline: 32px;
+    }
+  }
+
+  .navBarLink {
+    border: $border_base_1 transparent;
+
+    &:focus {
+      border-bottom: $border_base_1 $nord300;
+      background-color: $nord850;
+    }
+
+    &:hover {
+      background-color: $nord850;
+    }
+  }
+
+  .warningContainer {
+    padding: 8px 32px;
+    background: linear-gradient(90deg, #ef7631 0%, #ffa800 100%);
+
+    > div {
+      svg {
+        path {
+          stroke: $nord950;
+        }
+
+        circle: {
+          stroke: $nord950;
+        }
+      }
+
+      > span {
+        color: $nord950;
+
+        > span {
+          color: $nord950;
+        }
+      }
+    }
+  }
+
+  .headerLayout {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.textLink {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.verticalDivider {
+  height: 12px;
+}
+
+.navigationDropdown {
+  width: 200px;
+  background-color: $nord800;
+  right: 0;
+  padding: 4px;
+}
+
+.divider {
+  height: 18px;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+}
+
+.warningIconContainer {
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.qrIcon {
+  height: 18px;
+  width: 18px;
+}
+.dropdownContent {
+  right: 0;
+}
+.dropdown {
+  width: auto;
+}
+.textCenter {
+  text-align: center;
+}
+
+.burger {
+  .closeIcon {
+    path {
+      stroke: $nord50;
+    }
+  }
+
+  .icon {
+    path {
+      stroke: $nord400;
+    }
+  }
+}

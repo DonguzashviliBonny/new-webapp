@@ -1,0 +1,74 @@
+{
+  " ========== AsideNav ========== ": "",
+
+  "verification": "Verification",
+  "payment": "Payment",
+  "preferences": "Preferences",
+  "security": "Security",
+  "account": "Account",
+
+  " ========== Verification ========== ": "",
+
+  "currentLimits": "Current Limits",
+  "Basic": "Basic",
+  "Advanced": "Advanced",
+
+  " ========== Payment ========== ": "",
+  "paymentDescription": "Manage the payment method of your credit and debit card on the buy crypto page",
+
+  " ========== Preferences =========== ": "",
+
+  "Language": "Language ",
+  "Currency": "Currency",
+  "Theme": "Theme",
+  "Notifications": "Notifications",
+
+  " ========== Security =========== ": "",
+
+  "Email": "Email",
+  "Phone Number": "Phone Number",
+  "Authenticator App": "Authenticator App",
+
+  " ========== Account =========== ": "",
+
+  "Link Account": "Link Account",
+  "Delete Account": "Delete Account",
+  "Disable Account": "Disable Account",
+
+  " ========== Device Management =========== ": "",
+
+  "deviceManagement": "Device Management",
+
+  " ========== Common =========== ": "",
+
+  "addPhoneNumber": "Add Phone Number",
+  "changeName": "Change Name",
+  "changeEmail": "Change Email Address",
+  "changePhoneNumber": "Edit Phone Number",
+  "changePassword": "Change Password",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "logOut": "Log Out",
+  "done": "Done",
+  "securityVerification": "Security Verification",
+  "congratulations": "Congratulations",
+  "linkAnAuthenticator": "Link An Authenticator",
+  "verifyAuthenticator": "Verify Authenticator",
+  "connectGoogle": "Connect Your Google Account",
+  "disableAccount": "Disable Account",
+  "deleteAccount": "Delete Account",
+  "linkAccount": "Link Account",
+
+  " ========== Warnings =========== ": "",
+
+  "deletePaymentWarning": "Are you sure you want to Delete this payment method?",
+  "notificationsDisabled": "Notifications Disabled Successfully",
+  "notificationsEnabled": "Notifications Enabled Successfully",
+  "disableAccountWarning": "Are you sure you want to disable your account?",
+  "disableAuthenticator": "Are you sure you want to Disable Authenticator App?",
+  "deleteAccountWarning": "Are you sure you want to delete your account?",
+  "unlinkGoogle": "Are you sure you want to to unlink your Google account?",
+  "deletePhoneNumberWarning": "Are you sure you want to delete this phone number?",
+  "changeEmailWarning": "Are you sure you want to change your Email address?",
+  "changePasswordWarning": "Are you sure you want to change your password?"
+}

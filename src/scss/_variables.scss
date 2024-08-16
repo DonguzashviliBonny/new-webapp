@@ -1,0 +1,44 @@
+/*=============================================
+=            Colors            =
+=============================================*/
+
+$nord950: var(--nord-950);
+$nord900: var(--nord-900);
+$nord850: var(--nord-850);
+$nord800: var(--nord-800);
+$nord700: var(--nord-700);
+$nord600: var(--nord-600);
+$nord500: var(--nord-500);
+$nord400: var(--nord-400);
+$nord300: var(--nord-300);
+$nord50: var(--nord-50);
+
+$nordFail: rgb(239, 97, 97);
+$nordFail10: rgba($nordFail, 0.1);
+$nordSuccess: rgb(106, 179, 99);
+$nordSuccess10: rgba($nordSuccess, 0.1);
+$nordWarning: rgb(255, 168, 0);
+$nordWarning10: rgba($nordWarning, 0.1);
+$nordOrange: rgb(239, 118, 49);
+$nordOrange10: rgba($nordOrange, 0.1);
+$nordOrangeHovered: rgb(196, 90, 30);
+$nordOrangePressed: rgb(177, 85, 32);
+/*=============================================
+=            Layout Margins               =
+=============================================*/
+
+$margin-desktop: 64px auto 80px;
+$margin-laptop: 56px 32px 72px;
+$margin-tablet-small: 48px 32px 64px;
+$margin-mobile: 32px 16px 40px;
+
+$dashboard-margin-desktop: 0 auto 80px;
+$dashboard-margin-laptop: 0 32px 72px;
+$dashboard-margin-tablet-small: 0 32px 64px;
+$dashboard-margin-mobile: 0 16px 40px;
+
+/*=============================================
+=            Other            =
+=============================================*/
+
+$border_base_1: 1px solid;

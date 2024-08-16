@@ -1,0 +1,170 @@
+@import "normalize.css";
+@import "./helpers.scss";
+@import "nordom-ui/dist/style.css";
+
+/*----------  LIGHT COLORS  ----------*/
+$nordLight950: rgb(253, 253, 253);
+$nordLight900: rgb(245, 245, 245);
+$nordLight850: rgb(235, 235, 235);
+$nordLight800: rgb(221, 221, 221);
+$nordLight700: rgb(160, 160, 160);
+$nordLight600: rgb(124, 124, 124);
+$nordLight500: rgb(101, 101, 101);
+$nordLight400: rgb(82, 82, 82);
+$nordLight300: rgb(47, 47, 47);
+$nordLight50: rgb(16, 16, 16);
+
+/*----------  DARK COLORS  ----------*/
+
+$nordDark950: rgb(16, 16, 16);
+$nordDark900: rgb(22, 22, 22);
+$nordDark850: rgb(29, 29, 29);
+$nordDark800: rgb(47, 47, 47);
+$nordDark700: rgb(82, 82, 82);
+$nordDark600: rgb(101, 101, 101);
+$nordDark500: rgb(124, 124, 124);
+$nordDark400: rgb(160, 160, 160);
+$nordDark300: rgb(200, 200, 200);
+$nordDark50: rgb(253, 253, 253);
+
+/*----------  FINAL VARIABLES  ----------*/
+
+[data-theme="Light Mode"] {
+  --nord-950: #{$nordLight950};
+  --nord-900: #{$nordLight900};
+  --nord-850: #{$nordLight850};
+  --nord-700: #{$nordLight700};
+  --nord-800: #{$nordLight800};
+  --nord-600: #{$nordLight600};
+  --nord-500: #{$nordLight500};
+  --nord-400: #{$nordLight400};
+  --nord-300: #{$nordLight300};
+  --nord-50: #{$nordLight50};
+  --nord-orange: #{$nordOrange};
+  --nord-orange-10: #{$nordOrange10};
+}
+[data-theme="Dark Mode"] {
+  --nord-950: #{$nordDark950};
+  --nord-900: #{$nordDark900};
+  --nord-850: #{$nordDark850};
+  --nord-700: #{$nordDark700};
+  --nord-800: #{$nordDark800};
+  --nord-600: #{$nordDark600};
+  --nord-500: #{$nordDark500};
+  --nord-400: #{$nordDark400};
+  --nord-300: #{$nordDark300};
+  --nord-50: #{$nordDark50};
+  --nord-orange: #{$nordOrange};
+  --nord-orange-10: #{$nordOrange10};
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: $nord900;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $nord900;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $nord50; /* color of the scrollbar itself */
+    border-radius: 22px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.globalLayout {
+  margin: $margin-desktop;
+  @include media(laptop) {
+    margin: $margin-laptop;
+  }
+  @include media(tabletSmall) {
+    margin: $margin-tablet-small;
+  }
+  @include media(mobile) {
+    margin: $margin-mobile;
+  }
+}
+.dashboardLayout {
+  margin: $dashboard-margin-desktop;
+  @include media(laptop) {
+    margin: $dashboard-margin-laptop;
+  }
+  @include media(tabletSmall) {
+    margin: $dashboard-margin-tablet-small;
+  }
+  @include media(mobile) {
+    margin: $dashboard-margin-mobile;
+  }
+}
+
+.containerPaddingBlock {
+  padding-block: 80px;
+  @include media(tablet) {
+    padding-block: 88px;
+  }
+  @include media(laptop) {
+    padding-block: 96px;
+  }
+  @include media(desktop) {
+    padding-block: 104px;
+  }
+}
+
+.notification_alert {
+  transition: all 0.2s;
+  position: relative;
+  &::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: $nordFail;
+    position: absolute;
+    border-radius: 50%;
+    top: 0px;
+    right: 0px;
+    transition: all 0.2s;
+  }
+}
+
+.tooltipElement {
+  height: 8px;
+  width: 8px;
+  background-color: $nordOrange;
+  border-radius: 2px;
+  margin-right: 4px;
+}
