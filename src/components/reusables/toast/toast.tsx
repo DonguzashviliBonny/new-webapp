@@ -1,7 +1,15 @@
 import { forwardRef, useCallback } from "react";
+
+// ** 3rd party
 import { useSnackbar, SnackbarContent, CustomContentProps } from "notistack";
+
+// ** components
 import { Card, Flex, TextView } from "nordom-ui";
+
+// ** icons
 import { CloseIcon20, NotificationIcon20 } from "@/assets/svg";
+
+// ** style
 import classes from "./toast.module.scss";
 
 interface NotificationToastProps extends CustomContentProps {

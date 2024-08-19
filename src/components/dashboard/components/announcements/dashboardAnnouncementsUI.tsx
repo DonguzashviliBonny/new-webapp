@@ -1,5 +1,9 @@
 import React from "react";
+
+// ** style
 import classes from "./dashboardAnnouncements.module.scss";
+
+// ** types
 import { DashboardAnnouncementsProps } from "@/types/components/dashboard";
 
 // ** icons
@@ -7,13 +11,14 @@ import { ArrowRightIcon } from "@/assets/svg/arrows";
 
 // ** components
 import { TextView, Flex, ContainerLayout } from "nordom-ui";
+import AnnouncementsCard from "../../../reusables/cards/announcements/AnnouncementsCard";
+import DashboardAnnouncementsSkeleton from "./dashboardAnnouncements-skeleton";
 
 // ** hooks
 import { useDesktop, useMobile, useResponsive } from "@/hooks";
 
+// ** helpers
 import { calculateLastRowAndColumn } from "@/utils";
-import AnnouncementsCard from "../../../reusables/cards/announcements/AnnouncementsCard";
-import DashboardAnnouncementsSkeleton from "./dashboardAnnouncements-skeleton";
 
 const landing = import.meta.env.VITE_BASE_LANDING_APP_URL;
 

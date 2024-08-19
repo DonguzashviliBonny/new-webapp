@@ -10,14 +10,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [
     react(),
-    svgr({
-      svgrOptions: {
-        // typescript: true,
-        exportType: "default",
-      },
-      esbuildOptions: { jsx: "automatic" },
-      include: "**/*.svg",
-    }),
+    svgr(),
     compress({
       ext: ".gz", // Use gzip
       algorithm: "gzip",

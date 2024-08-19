@@ -1,12 +1,23 @@
+// ** icons
 import { SortAscIcon, SortDefaultIcon, SortDescIcon } from "@/assets/svg";
 import { ArrowDownRightIcon, ArrowUpRightIcon } from "@/assets/svg/arrows";
-import { HoldingsColumn, TableHidableTitle } from "@/components/reusables/columns/TableColumns";
+
+// ** hooks
 import { useDesktop, useResponsive, useTablet } from "@/hooks";
+
+// ** types
 import { DashboardAssetI, DashboardAssetsColumnsProps } from "@/types/components/dashboard";
+
+// ** helpers
 import { toFixedNoRound } from "@/utils";
 import { createColumnHelper } from "@tanstack/react-table";
+
+// ** components
 import { ButtonSecondary, Flex, TextView } from "nordom-ui";
 import { Link } from "react-router-dom";
+import { HoldingsColumn, TableHidableTitle } from "@/components/reusables/columns/TableColumns";
+
+// ** style
 import classes from "./dashboardAssetsUI.module.scss";
 
 export const DashboardAssetsColumns = ({
@@ -29,21 +40,6 @@ export const DashboardAssetsColumns = ({
   };
 
   const columns = [
-    columnHelper.accessor("rank", {
-      header: () => (
-        <Flex align="center" gap={2} onClick={() => handleColumnSort("rank")}>
-          <TextView size={isTablet ? 14 : 12}>#</TextView>
-          {sortIconRenderer("rank")}
-        </Flex>
-      ),
-      cell: ({ row }) => (
-        <TextView weight="500" size={isTablet ? 16 : 12}>
-          {row.original.rank}
-        </TextView>
-      ),
-      enableResizing: false,
-      maxSize: 48,
-    }),
     columnHelper.accessor("name", {
       header: () => (
         <Flex align="center" gap={4} onClick={() => handleColumnSort("name")}>
@@ -52,7 +48,6 @@ export const DashboardAssetsColumns = ({
         </Flex>
       ),
       cell: ({ row }) => (
-        // <div onClick={() => router.push(`/markets/${row.original.asset.toUpperCase()}`)}>
         <Flex gap={isDesktop ? 12 : 8} align="center">
           <img src={row.original?.logoUrl} alt={row.original?.name + "-icon"} width={32} height={32} />
           <Flex
@@ -73,7 +68,6 @@ export const DashboardAssetsColumns = ({
             </TextView>
           </Flex>
         </Flex>
-        // </div>
       ),
       size: 200,
     }),
@@ -187,7 +181,7 @@ export const DashboardAssetsColumns = ({
       ),
       cell: ({ row }) => (
         <Flex gap={8} justify="flex-end">
-          <Link to={"/trade/spot-trading/${row.original?.code}_USDT"} style={{ textDecoration: "none" }}>
+          <Link to={`/trade/spot-trading/${row.original?.code}_USDT`} style={{ textDecoration: "none" }}>
             <ButtonSecondary size="extraSmall">
               <TextView weight="500" size={isDesktop ? 14 : 12}>
                 Trade
@@ -208,9 +202,10 @@ export const DashboardAssetsColumns = ({
     }),
   ];
 
+  console.log(columns);
+
   const mobileColumns = columns.filter(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (e: any) =>
+    (e: { accessorKey: string }) =>
       e.accessorKey !== "rank" &&
       e.accessorKey !== "volume_24h" &&
       e.accessorKey !== "actions" &&

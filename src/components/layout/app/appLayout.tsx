@@ -1,7 +1,10 @@
+// ** components
 import { Flex } from "nordom-ui";
 import { Outlet } from "react-router-dom";
 import Header from "../../header/headerUI";
 import FooterContainer from "@/containers/footer/footer";
+
+// ** style
 import classes from "./appLayout.module.scss";
 
 const AppLayout = () => {

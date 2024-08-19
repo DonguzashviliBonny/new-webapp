@@ -1,6 +1,11 @@
-import { DashboardHeaderDetailsResT } from "@/api/types/dashboard";
+// ** components
 import DashboardPortfolioUI from "@/components/dashboard/components/portfolio/dashboardPortfolioUI";
+
+// ** types
+import { DashboardHeaderDetailsResT } from "@/api/types/dashboard";
 import { DashboardPortfolioProps, PieChartI, PortfolioChartI } from "@/types/components/dashboard";
+
+// ** hooks
 import { useState } from "react";
 
 const DashboardPortfolio = ({ data }: DashboardHeaderDetailsResT) => {

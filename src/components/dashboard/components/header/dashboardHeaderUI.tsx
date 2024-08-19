@@ -1,5 +1,6 @@
+// ** components
 import LazyImage from "@/components/reusables/lazyImg/lazyImg";
-import { useMobile, useResponsive, useTablet } from "@/hooks";
+import DashboardHeaderSkeleton from "./dashboardHeaderUI-skeleton";
 import {
   AlignT,
   ButtonSecondary,
@@ -12,13 +13,22 @@ import {
   TextViewLevelT,
 } from "nordom-ui";
 
+// ** data
+import { navigateData } from "@/assets/data/dashboard";
+
+// ** style
 import classes from "./dashboardHeaderUI.module.scss";
+
+// ** hooks
+import { useMobile, useResponsive, useTablet } from "@/hooks";
+import { useNavigate } from "react-router-dom";
+
+// ** types
 import { DashboardHeaderProps } from "@/types/components/dashboard";
 import { formatAmountToString } from "@/utils/format/format";
-import { navigateData } from "@/assets/data/dashboard";
-import { useNavigate } from "react-router-dom";
+
+// ** icons
 import { CopyIcon, InvisibleIcon, VisibleIcon } from "@/assets/svg";
-import DashboardHeaderSkeleton from "./dashboardHeaderUI-skeleton";
 
 const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, hide }: DashboardHeaderProps) => {
   const navigate = useNavigate();

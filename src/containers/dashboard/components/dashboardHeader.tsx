@@ -1,6 +1,13 @@
+// ** types
 import { DashboardHeaderDetailsResT } from "@/api/types/dashboard";
+
+// ** components
 import DashboardHeaderUI from "@/components/dashboard/components/header/dashboardHeaderUI";
+
+// ** types
 import { DashboardHeaderProps } from "@/types/components/dashboard";
+
+// ** hooks
 import { useState } from "react";
 
 const DashboardHeader = ({ data }: DashboardHeaderDetailsResT) => {

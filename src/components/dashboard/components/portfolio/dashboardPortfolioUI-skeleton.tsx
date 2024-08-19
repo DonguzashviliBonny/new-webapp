@@ -1,12 +1,17 @@
+// ** hooks
 import { useMobile, useTablet, useLaptop, useResponsive } from "@/hooks";
+
+// ** components
 import { DirectionT, CardPaddingsT, Flex, ContainerLayout, Skeleton, Card } from "nordom-ui";
 
+// ** style
 import classes from "./dashboardPortfolioUI.module.scss";
 
 const DashboardPortfolioSkeleton = () => {
   const isMobile = useMobile();
   const isTablet = useTablet();
   const isLaptop = useLaptop();
+
   const chartsLayout: DirectionT = useResponsive({ laptop: "row", mobile: "column" });
   const chartLayoutInlinePadding: CardPaddingsT = useResponsive({ desktop: "32", tablet: "24", mobile: "16" });
   const PieChartLayoutGap = useResponsive({ desktop: 44, laptop: 34, tablet: 58, mobile: 21 });

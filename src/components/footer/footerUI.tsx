@@ -1,15 +1,29 @@
-import { Divider, Flex, TextView, Collapse, Grid, ContainerLayout } from "nordom-ui";
-// import TitleList from "./TitleList";
+// ** icons
 import { LogoIconDark, LogoIconLight } from "@/assets/svg";
-import { useDesktop, useLaptop, useTablet } from "@/hooks";
+
+// ** style
 import classes from "./Footer.module.scss";
+
+// ** store
 import usePreferencesStore from "@/store/preferencesStore";
-import { Link } from "react-router-dom";
+
+// ** hooks
+import { useDesktop, useLaptop, useTablet } from "@/hooks";
 import { useResponsive } from "@/hooks";
 import { useOidc } from "@/oidc/oidc";
+
+// ** types
 import { FooterContentT } from "@/api/types/layout";
+
+// ** data
 import { footerListData } from "@/assets/data/footer";
+
+// ** icons
 import { ChevronDownIcon24, ChevronUpIcon24 } from "@/assets/svg/arrows";
+
+// ** components
+import { Link } from "react-router-dom";
+import { Divider, Flex, TextView, Collapse, Grid, ContainerLayout } from "nordom-ui";
 import LazyImage from "../reusables/lazyImg/lazyImg";
 import CommunityChannels from "./components/communityChannels";
 import AuthenticatedFooter from "./components/authentificatedFooter";

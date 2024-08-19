@@ -1,7 +1,14 @@
-import { Card, CardPaddingsT, Flex, Tag, TextView, Tooltip } from "nordom-ui";
+// ** helpers
 import { formatDate } from "@/utils";
+
+// ** style
 import classes from "./AnnouncementsCard.module.scss";
+
+// ** hooks
 import { useResponsive } from "@/hooks";
+
+// ** components
+import { Card, CardPaddingsT, Flex, Tag, TextView, Tooltip } from "nordom-ui";
 import { ArticleCardProps } from "@/types/components/cards";
 
 const landing = import.meta.env.VITE_BASE_LANDING_APP_URL;

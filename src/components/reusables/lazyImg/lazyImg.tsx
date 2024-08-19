@@ -1,5 +1,7 @@
-import useIntersectionObserver from "@/hooks/useResponsive/useIntersectionObserver";
 import React, { useEffect } from "react";
+
+// ** hooks
+import useIntersectionObserver from "@/hooks/useResponsive/useIntersectionObserver";
 
 interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src?: string;

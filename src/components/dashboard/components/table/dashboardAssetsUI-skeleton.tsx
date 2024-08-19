@@ -1,5 +1,10 @@
+// ** hooks
 import { useResponsive, useTablet } from "@/hooks";
+
+// ** components
 import { ContainerLayout, Flex, Skeleton } from "nordom-ui";
+
+// ** style
 import classes from "./dashboardAssetsUI.module.scss";
 
 const DashboardAssetsUISkeleton = () => {

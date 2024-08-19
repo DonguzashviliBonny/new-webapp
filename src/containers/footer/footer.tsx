@@ -1,4 +1,7 @@
+// ** service
 import { useFooterContentReq } from "@/api/requests/layout";
+
+// ** components
 import FooterUI from "@/components/footer/footerUI";
 import { FooterSkeleton } from "@/components/footer/footer-skeleton";
 

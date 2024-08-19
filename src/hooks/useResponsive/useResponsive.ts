@@ -5,9 +5,6 @@ export const useMobile = () => {
   return useMediaQuery("(max-width:549px)");
 };
 
-// export const useTabletSmall = () => {
-//   return useMediaQuery("(min-width:550px)");
-// };
 export const useTablet = () => {
   return useMediaQuery("(min-width:744px)");
 };

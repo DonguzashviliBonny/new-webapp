@@ -10,7 +10,11 @@ import { TextView, Flex, Card, DirectionT } from "nordom-ui";
 
 // ** hooks
 import { useMobile, useResponsive } from "@/hooks";
+
+// ** helpers
 import { formatAmountToString, formatLargeNumber } from "@/utils";
+
+// ** types
 import { DonutChartProps } from "@/types/components/dashboard";
 
 const DonutChart: React.FC<DonutChartProps> = ({ data, hovered, handleMouseOver, setHovered }) => {

@@ -1,7 +1,16 @@
+// ** icons
 import { InvisibleIcon, VisibleIcon } from "@/assets/svg";
+
+// ** hooks
 import { useDesktop, useMobile, useTablet } from "@/hooks";
+
+// ** components
 import { DashboardTableDataT, HoldingsColumnProps, TableTitleProps } from "@/types/components/dashboard";
+
+// ** helpers
 import { getFormattedUnhiddenAmount } from "@/utils";
+
+// ** components
 import { Flex, TextView } from "nordom-ui";
 
 export const TableHidableTitle: React.FC<TableTitleProps> = ({ setHide, hide, setHoldingsSort, tableData }) => {

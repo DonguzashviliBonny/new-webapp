@@ -1,6 +1,11 @@
+// ** service
 import { useDashboardAnnouncementsReq, useDashboardHeaderReq } from "@/api/requests/dashboard";
+
+// ** hooks
 import { useResponsive } from "@/hooks";
 import { useOidc } from "@/oidc/oidc";
+
+// ** components
 import { Flex } from "nordom-ui";
 import DashboardHeader from "./components/dashboardHeader";
 import DashboardPortfolio from "./components/dashboardPortfolio";

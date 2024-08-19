@@ -11,6 +11,8 @@ import { useResponsive, useTablet } from "@/hooks";
 
 // ** utils
 import { getCSSVarValue } from "@/utils";
+
+// ** types
 import { LineChartProps } from "@/types/components/dashboard";
 
 const LineChart: React.FC<LineChartProps> = ({ data, bgColor }) => {

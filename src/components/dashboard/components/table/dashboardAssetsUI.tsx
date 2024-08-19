@@ -1,9 +1,18 @@
+// ** icons
 import { SearchIcon } from "@/assets/svg";
+
+// ** hooks
 import { useMobile, useResponsive, useTablet } from "@/hooks";
-import { DashboardAssetsUIProps, DashboardTableDataT } from "@/types/components/dashboard";
+
+// ** 3rd party
 import { getCoreRowModel, getFilteredRowModel, useReactTable } from "@tanstack/react-table";
-import { ContainerLayout, Flex, Input, Table, TextView } from "nordom-ui";
+
+// ** style
 import classes from "./dashboardAssetsUI.module.scss";
+
+// ** components
+import { DashboardAssetsUIProps, DashboardTableDataT } from "@/types/components/dashboard";
+import { ContainerLayout, Flex, Input, Table, TextView } from "nordom-ui";
 import DashboardAssetsUISkeleton from "./dashboardAssetsUI-skeleton";
 import { DashboardAssetsColumns } from "./dashboardAssetsColumns";
 

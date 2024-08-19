@@ -1,7 +1,13 @@
+// ** hooks
 import { useResponsive } from "@/hooks";
+
+// ** helpers
 import { calculateLastRowAndColumn } from "@/utils";
+
+// ** componnets
 import { CardPaddingsT, Flex, ContainerLayout, Card, Skeleton } from "nordom-ui";
 
+// ** style
 import classes from "./dashboardAnnouncements.module.scss";
 
 const DashboardAnnouncementsSkeleton = () => {
@@ -15,6 +21,7 @@ const DashboardAnnouncementsSkeleton = () => {
           <Skeleton borderRadius={4} perItem={1} height={32} width={162} />
         </Card>
       </ContainerLayout>
+
       <ContainerLayout border_left border_right border_bottom>
         <section className={classes.cardsWrapper}>
           {Array.from({ length: 3 }).map((_, index) => {
