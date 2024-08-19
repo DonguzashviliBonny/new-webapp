@@ -20,7 +20,7 @@ import UnauthenticatedHeader from "./components/unAuthenticatedHeader";
 import AuthenticatedHeader from "./components/authentificatedHeader";
 import MobileHeader from "./components/mobileHeader";
 
-const Header = () => {
+const HeaderUI = () => {
   const { isUserLoggedIn } = useOidc();
   const { theme } = usePreferencesStore();
 
@@ -35,8 +35,6 @@ const Header = () => {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.currentTarget.blur();
   };
-
-  console.log(laptop);
 
   return (
     <header className={classes.headerContainer}>
@@ -55,7 +53,11 @@ const Header = () => {
         <Flex align="center" justify="space-between">
           <Flex align="center" gap={desktop ? 45 : 24}>
             <Link to="/" type="secondary">
-              {theme === "dark" ? <LogoIconDark data-testid="logo-dark" /> : <LogoIconLight data-testid="logo-light" />}
+              {theme === "Dark Mode" ? (
+                <LogoIconDark data-testid="logo-dark" />
+              ) : (
+                <LogoIconLight data-testid="logo-light" />
+              )}
             </Link>
 
             {laptop && (
@@ -86,4 +88,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderUI;

@@ -1,0 +1,61 @@
+@import "@/scss/helpers.scss";
+
+.container {
+  overflow: hidden;
+}
+
+.tableWrapper {
+  width: 100%;
+}
+
+.removeP {
+  position: relative;
+  padding: 0;
+}
+
+.inputDiv {
+  max-width: unset;
+  width: 100%;
+
+  :global(.NDM_input_icon) {
+    svg {
+      width: 24px;
+      height: 24px;
+      path {
+        stroke: $nord600;
+      }
+    }
+  }
+
+  :global(.NDM_input_focused) {
+    svg {
+      path {
+        stroke: $nord50;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    max-width: 312px;
+  }
+
+  @include media(laptop) {
+    max-width: 356px;
+  }
+}
+
+.upIcon {
+  width: 20px;
+  height: 20px;
+
+  path {
+    stroke: $nordSuccess;
+  }
+}
+.downIcon {
+  width: 20px;
+  height: 20px;
+  path {
+    stroke: $nordFail;
+  }
+}

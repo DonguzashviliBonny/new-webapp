@@ -1,0 +1,93 @@
+@import "@/scss/helpers";
+
+.navigateIconsWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .navigateIcons {
+    width: 24px;
+    height: 24px;
+    path {
+      stroke: $nord400;
+    }
+  }
+
+  @include media(laptop) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.editIcon {
+  border-radius: 4px;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  background-color: $nordOrange10;
+  padding: 4px;
+  cursor: pointer;
+  path {
+    stroke: $nordOrange;
+  }
+}
+
+.tagWrapper {
+  max-width: 100px;
+  width: 100%;
+}
+
+.hideBtnWrapper {
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background-color: $nord850;
+
+  @include media(tablet) {
+    width: 28px;
+    height: 24px;
+  }
+
+  @include media(laptop) {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hideBtn {
+    cursor: pointer;
+
+    background-color: $nordOrange10;
+
+    path {
+      stroke: $nord50;
+    }
+  }
+}
+
+.content {
+  max-width: 1280px;
+  width: 100%;
+}
+
+.profileImg {
+  width: 92px;
+  height: 92px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  @include media(tablet) {
+    width: 96px;
+    height: 96px;
+  }
+
+  @include media(laptop) {
+    width: 104px;
+    height: 104px;
+  }
+}

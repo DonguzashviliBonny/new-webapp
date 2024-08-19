@@ -35,7 +35,7 @@ export const FooterSkeleton = () => {
                 !laptop ? (
                   <Skeleton key={i} perItem={1} width={121} height={18} bg_color="nord800" borderRadius={4} />
                 ) : (
-                  <Flex gap={12} direction="column" className={classes.titleLists}>
+                  <Flex gap={12} direction="column" className={classes.titleLists} key={i}>
                     <Skeleton perItem={1} width={121} height={18} borderRadius={4} />
                     <Flex direction="column" gap={8}>
                       {list.map(({ id }) => (

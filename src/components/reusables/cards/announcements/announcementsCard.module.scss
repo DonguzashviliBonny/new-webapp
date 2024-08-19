@@ -1,0 +1,57 @@
+@import "@/scss/helpers";
+
+.article {
+  &:hover {
+    background-color: $nord850;
+  }
+
+  .blogText {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media(laptop) {
+      -webkit-line-clamp: 4;
+    }
+    @include media(desktop) {
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  .tooltip {
+    &:hover {
+      border: $border_base_1 $nord400;
+    }
+  }
+
+  .richText {
+    h1 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .limitedText {
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include media(tablet) {
+        -webkit-line-clamp: 3;
+      }
+      @include media(laptop) {
+        -webkit-line-clamp: 2;
+      }
+      @include media(desktop) {
+        -webkit-line-clamp: 5;
+      }
+    }
+  }
+}

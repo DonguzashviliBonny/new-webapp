@@ -32,7 +32,8 @@ const CommunityChannels: React.FC<{ data: footerChannelsT[] } & { TitleChannels:
               <LazyImage
                 src={attributes.Image.data.attributes.url}
                 alt={attributes.Image.data.attributes.name}
-                {...attributes.Image.data.attributes}
+                width={attributes.Image.data.attributes.width}
+                height={attributes.Image.data.attributes.height}
               />
             </Flex>
           </Link>

@@ -1,0 +1,195 @@
+{
+  "spacing": {
+    "4": 4
+  },
+  "colors": {
+    "cardBGColors": {
+      "nord950": "nord950",
+      "nord900": "nord900",
+      "nord850": "nord850",
+      "nord800": "nord800",
+      "nord50": "nord50",
+      "warning10": "nordWarning10",
+      "transparent": "transparent"
+    },
+    "typographyColors": {
+      "nord50": "nord50",
+      "nord300": "nord300",
+      "nord400": "nord400",
+      "nord500": "nord500",
+      "nord600": "nord600",
+      "error": "error",
+      "warning": "warning",
+      "success": "success",
+      "info": "info"
+    },
+    "tagBGColors": {
+      "success10": "success10",
+      "nord800": "nord800",
+      "nord850": "nord850",
+      "fail10": "fail10",
+      "nordOrange10": "nordOrange10"
+    },
+    "dividerColors": {
+      "nord50": "nord50",
+      "nord800": "nord800"
+    },
+    "pieChartColors": ["#F39948", "#A66FBD", "#3DCDAF", "#DC7065", "#EBCD53", "#6BB5E7"],
+    "selectBgColors": {
+      "navy_50": "navy_50",
+      "navy_10": "navy_10",
+      "gray": "gray",
+      "white": "white"
+    },
+    "selectColors": {
+      "navy_10": "navy_10",
+      "navy_3": "navy_3",
+      "white": "white",
+      "white_80": "white_80",
+      "white_60": "white_60",
+      "white_50": "white_50",
+      "white_20": "white_20",
+      "white_10": "white_10",
+      "white_3": "white_3",
+      "error": "error",
+      "warning": "warning",
+      "success": "success",
+      "info": "info"
+    },
+    "skeletonColors": {
+      "nord950": "nord950",
+      "nord900": "nord900",
+      "nord850": "nord850",
+      "nord800": "nord800",
+      "nord700": "nord700",
+      "nord600": "nord600",
+      "nord500": "nord500",
+      "nord400": "nord400",
+      "nord300": "nord300",
+      "nord50": "nord50"
+    }
+  },
+  "fonts": {
+    "size": {
+      "text_level": {
+        "12": 12,
+        "14": 14,
+        "16": 16,
+        "20": 20,
+        "24": 24,
+        "28": 28,
+        "32": 32,
+        "40": 40,
+        "56": 56
+      }
+    },
+    "weight": {
+      "text": {
+        "400": 400,
+        "500": 500,
+        "700": 700,
+        "800": 800
+      }
+    }
+  },
+  "paddings": {
+    "cardPaddings": {
+      "8": 8,
+      "12": 12,
+      "16": 16,
+      "20": 20,
+      "24": 24,
+      "32": 32
+    },
+    "tagPaddings": {
+      "2": 2,
+      "4": 4,
+      "6": 6,
+      "8": 8,
+      "12": 12,
+      "16": 16
+    },
+    "selectPaddings": {
+      "8": 8,
+      "12": 12
+    }
+  },
+  "borderRadius": {
+    "cardBorderRadius": {
+      "0": 0,
+      "8": 8,
+      "10": 10,
+      "34": 34,
+      "100": 100
+    },
+    "tagBorderRadius": {
+      "4": 4,
+      "6": 6
+    },
+    "selectBorderRadius": {
+      "8": 8,
+      "12": 12
+    },
+    "skeletonBorderRadius": {
+      "4": 4,
+      "8": 8,
+      "10": 10,
+      "12": 12,
+      "16": 16
+    }
+  },
+  "types": {
+    "buttonTypes": {
+      "extraSmall": "extraSmall",
+      "small": "small",
+      "medium": "medium",
+      "large": "large"
+    },
+
+    "dividerDirections": {
+      "horizontal": "horizontal",
+      "vertical": "vertical"
+    }
+  },
+  "sizes": {
+    "iconButtonSizes": {
+      "Default": "default",
+      "Small": "small"
+    },
+    "modalSizes": {
+      "small": "small",
+      "large": "large"
+    }
+  },
+  "margins": {
+    "dividerMargins": {
+      "0": 0,
+      "8": 8,
+      "12": 12,
+      "16": 16,
+      "24": 24,
+      "32": 32
+    }
+  },
+  "borders": {
+    "cardBorders": {
+      "nord800": "nord800",
+      "nord700": "nord700",
+      "nord300": "nord300",
+      "none": "none"
+    },
+    "borderStyles": {
+      "dashed": "dashed",
+      "solid": "solid"
+    },
+    "borderSize": {
+      "1": 1,
+      "2": 2,
+      "3": 3
+    },
+    "colors": {
+      "nord50": "nord50",
+      "nord800": "nord800"
+    }
+  }
+}

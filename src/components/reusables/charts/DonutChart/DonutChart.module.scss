@@ -1,0 +1,84 @@
+@import "@/scss/helpers.scss";
+
+.donutChart {
+  overflow: unset !important;
+}
+
+.pieChartSect {
+  // max-width: 524px;
+  width: 100%;
+
+  @include media(tablet) {
+    max-width: unset;
+  }
+
+  .pieChartContent {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pieChart {
+    margin: 4px;
+    width: 180px;
+
+    @include media(laptop) {
+      width: 188px;
+    }
+
+    svg {
+      width: 180px;
+
+      @include media(laptop) {
+        width: 188px;
+      }
+    }
+
+    position: relative;
+  }
+}
+
+.pieChartContentWrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin-top: 70.5px;
+
+  @include media(tablet) {
+    margin-top: 39px;
+  }
+
+  @include media(laptop) {
+    margin-top: 48px;
+  }
+}
+
+.dataText {
+  // max-width: 244px;
+  width: 100%;
+  margin-right: 0;
+
+  @include media(tablet) {
+    margin-right: 21px;
+  }
+
+  @include media(laptop) {
+    margin-right: 0;
+  }
+
+  @include media(desktop) {
+    margin-right: 16px;
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.assetValuePieChart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

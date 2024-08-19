@@ -9,5 +9,6 @@ export const useUserInitialPreferencesReq = (token: string) => {
     queryFn: () => getUserInitialPreferences(token),
     enabled: !!token,
   });
-  return data;
+  const response = { ...data, data: data.data?.data };
+  return response;
 };

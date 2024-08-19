@@ -1,13 +1,18 @@
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import AppLayout from "../components/layout/app/appLayout";
-import { ReactNode, useEffect, useState } from "react";
+import { lazy, ReactNode, useEffect, useState } from "react";
 import { getOidc, useOidc } from "@/oidc/oidc";
+
+// ** lazy loads
+const Dashboard = lazy(() => import("@/pages/Dashboard"));
 
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<ProtectedRoute children={<AppLayout />} />} />
+      <Route path="/" element={<ProtectedRoute children={<AppLayout />} />}>
+        <Route index element={<Dashboard />} />
+      </Route>
     </Routes>
   );
 };

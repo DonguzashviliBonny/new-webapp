@@ -15,7 +15,7 @@ import CommunityChannels from "./components/communityChannels";
 import AuthenticatedFooter from "./components/authentificatedFooter";
 import UnauthenticatedFooter from "./components/unAuthentificatedFooter";
 
-const Footer: React.FC<FooterContentT> = (props) => {
+const FooterUI: React.FC<FooterContentT> = (props) => {
   const desktop = useDesktop();
   const laptop = useLaptop();
   const tablet = useTablet();
@@ -47,7 +47,7 @@ const Footer: React.FC<FooterContentT> = (props) => {
   };
 
   return (
-    <ContainerLayout>
+    <ContainerLayout bg_color="nord950">
       <footer className={classes.container} role="footer">
         <div className={classes.layout}>
           <Flex gap={laptop ? 40 : 0} direction="column">
@@ -104,7 +104,7 @@ const Footer: React.FC<FooterContentT> = (props) => {
               <Flex direction="column" gap={32} align="center">
                 <Flex justify="space-between" align="center" className={classes.widthFull}>
                   <Link to="/" type="secondary" role="themeRole">
-                    {theme === "dark" ? <LogoIconDark /> : <LogoIconLight />}
+                    {theme === "Dark Mode" ? <LogoIconDark /> : <LogoIconLight />}
                   </Link>
 
                   {!tablet && !isUserLoggedIn ? null : (
@@ -113,7 +113,7 @@ const Footer: React.FC<FooterContentT> = (props) => {
                     </TextView>
                   )}
 
-                  {isUserLoggedIn ? null : (
+                  {!isUserLoggedIn && (
                     <Flex gap={tablet ? 12 : 8}>
                       {certificatesData.map((item) => (
                         <LazyImage
@@ -128,7 +128,7 @@ const Footer: React.FC<FooterContentT> = (props) => {
                   )}
                 </Flex>
 
-                {tablet && !isUserLoggedIn ? (
+                {!tablet && !isUserLoggedIn ? (
                   <TextView size={14} weight="400">
                     &#169; 2024 BAM Trading Services Inc. d.b.a.
                   </TextView>
@@ -142,7 +142,7 @@ const Footer: React.FC<FooterContentT> = (props) => {
   );
 };
 
-export default Footer;
+export default FooterUI;
 
 const TitleList: React.FC<Omit<(typeof footerListData)[0], "key">> = ({ title, list }) => {
   return (

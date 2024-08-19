@@ -1,0 +1,30 @@
+@import "@/scss/helpers";
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include media(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.announcementsContainer {
+  margin-bottom: 56px;
+
+  @include media(tablet) {
+    margin-bottom: 64px;
+  }
+
+  @include media(laptop) {
+    margin-bottom: 72px;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 80px;
+  }
+}

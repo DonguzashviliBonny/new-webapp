@@ -1,0 +1,23 @@
+@import "@/scss/helpers.scss";
+
+.header {
+  background: $nord950;
+  padding: 24px 30px;
+  @include media(tabletSmall) {
+    padding: 24px 16px;
+  }
+}
+
+.content {
+  max-width: 1280px;
+  width: 100%;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include media(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

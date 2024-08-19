@@ -1,0 +1,13 @@
+@import "@/scss/helpers";
+
+.portfolioChart {
+  width: 100%;
+
+  @include media(laptop) {
+    max-width: 472px;
+  }
+
+  @include media(laptop) {
+    max-width: 740px;
+  }
+}
