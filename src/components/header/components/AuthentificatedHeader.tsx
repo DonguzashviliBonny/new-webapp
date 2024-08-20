@@ -17,7 +17,7 @@ import { useSignalR } from "@/hooks/useSignal/useSignalR";
 
 // ** components
 import { TextView, Flex, Divider, ButtonPrimary, ButtonSecondary } from "nordom-ui";
-import AccountNavigation from "./accountNavigation";
+import AccountNavigation from "./AccountNavigation";
 import QRCodeDropdown from "./qrCodeDropdown";
 
 const AuthenticatedHeader: React.FC = () => {

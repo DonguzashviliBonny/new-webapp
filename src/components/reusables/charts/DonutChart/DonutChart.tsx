@@ -15,7 +15,7 @@ import { useMobile, useResponsive } from "@/hooks";
 import { formatAmountToString, formatLargeNumber } from "@/utils";
 
 // ** types
-import { DonutChartProps } from "@/types/components/dashboard";
+import { DonutChartProps } from "@/types/components/dashboard/dashboardProps";
 
 const DonutChart: React.FC<DonutChartProps> = ({ data, hovered, handleMouseOver, setHovered }) => {
   const mobile = useMobile();

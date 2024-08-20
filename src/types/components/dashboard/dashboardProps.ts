@@ -1,4 +1,4 @@
-import { BalanceI, sortT, StrapiT } from "../common";
+import { BalanceI, sortT, StrapiT } from "../../common";
 
 export interface DashboardAssetI {
   readonly rank: number;

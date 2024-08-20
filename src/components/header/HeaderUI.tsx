@@ -16,9 +16,9 @@ import { headerLinks } from "@/assets/data/header";
 
 // ** components
 import { TextView, Flex, Card, ContainerLayout } from "nordom-ui";
-import UnauthenticatedHeader from "./components/unAuthenticatedHeader";
-import AuthenticatedHeader from "./components/authentificatedHeader";
-import MobileHeader from "./components/mobileHeader";
+import UnauthenticatedHeader from "./components/UnauthentificatedHeader";
+import AuthenticatedHeader from "./components/AuthentificatedHeader";
+import MobileHeader from "./components/MobileHeader";
 
 const HeaderUI = () => {
   const { isUserLoggedIn } = useOidc();

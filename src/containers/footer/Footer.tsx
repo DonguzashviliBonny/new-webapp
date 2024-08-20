@@ -2,8 +2,8 @@
 import { useFooterContentReq } from "@/api/requests/layout";
 
 // ** components
-import FooterUI from "@/components/footer/footerUI";
-import { FooterSkeleton } from "@/components/footer/footer-skeleton";
+import FooterUI from "@/components/footer/FooterUI";
+import { FooterSkeleton } from "@/components/footer/Footer-skeleton";
 
 const FooterContainer = () => {
   const { data } = useFooterContentReq();

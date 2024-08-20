@@ -6,7 +6,7 @@ import { useState } from "react";
 
 // ** components
 import { Flex, Drawer, ButtonSecondary } from "nordom-ui";
-import BurgerMenu from "./burgerMenu";
+import BurgerMenu from "./BurgerMenu";
 
 const MobileHeader: React.FC = () => {
   const [openBurgerMenu, setOpenBurgerMenu] = useState(false);

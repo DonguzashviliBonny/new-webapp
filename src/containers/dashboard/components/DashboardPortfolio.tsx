@@ -1,9 +1,9 @@
 // ** components
-import DashboardPortfolioUI from "@/components/dashboard/components/portfolio/dashboardPortfolioUI";
+import DashboardPortfolioUI from "@/components/dashboard/components/portfolio/DashboardPortfolioUI";
 
 // ** types
-import { DashboardHeaderDetailsResT } from "@/api/types/dashboard";
-import { DashboardPortfolioProps, PieChartI, PortfolioChartI } from "@/types/components/dashboard";
+import { DashboardHeaderDetailsResT } from "@/api/types/responses/dashboard";
+import { DashboardPortfolioProps, PieChartI, PortfolioChartI } from "@/types/components/dashboard/dashboardProps";
 
 // ** hooks
 import { useState } from "react";

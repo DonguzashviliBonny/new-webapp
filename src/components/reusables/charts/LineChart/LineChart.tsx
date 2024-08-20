@@ -13,7 +13,7 @@ import { useResponsive, useTablet } from "@/hooks";
 import { getCSSVarValue } from "@/utils";
 
 // ** types
-import { LineChartProps } from "@/types/components/dashboard";
+import { LineChartProps } from "@/types/components/dashboard/dashboardProps";
 
 const LineChart: React.FC<LineChartProps> = ({ data, bgColor }) => {
   const tablet = useTablet();

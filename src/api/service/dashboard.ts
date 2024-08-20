@@ -1,7 +1,11 @@
-import { QueryPaginationI } from "@/types/common";
 import { axiosPrivateGateWay, axiosPublicGateway } from "../client";
 import { endpoints } from "../endpoints";
-import { DashboardHeaderDetailsResT, GetDashboardAnnouncementsResI, GetDashboardAssetsResT } from "../types/dashboard";
+import {
+  DashboardHeaderDetailsResT,
+  GetDashboardAnnouncementsResI,
+  GetDashboardAssetsResT,
+} from "../types/responses/dashboard";
+import { GetDashboardAssetsReqT } from "../types/requests/dashboard";
 
 export const getDashboardDetailsService = async (token: string): Promise<DashboardHeaderDetailsResT> => {
   const { GetDashboardProfile } = endpoints.dashboard;
@@ -12,10 +16,7 @@ export const getDashboardDetailsService = async (token: string): Promise<Dashboa
 export const getDashboardAssetsService = async ({
   token,
   params,
-}: {
-  token: string;
-  params: QueryPaginationI;
-}): Promise<GetDashboardAssetsResT> => {
+}: GetDashboardAssetsReqT): Promise<GetDashboardAssetsResT> => {
   const { data } = await axiosPrivateGateWay(token).get<GetDashboardAssetsResT>(
     endpoints.dashboard.GetDashboardAssets,
     {

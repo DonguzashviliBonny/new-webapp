@@ -1,19 +1,23 @@
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
-import AppLayout from "../components/layout/app/appLayout";
-import { lazy, ReactNode, useEffect, useState } from "react";
+import AppLayout from "../components/layout/app/AppLayout";
+import { lazy, ReactNode, Suspense, useEffect, useState } from "react";
 import { getOidc, useOidc } from "@/oidc/oidc";
 
 // ** lazy loads
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
+const Settings = lazy(() => import("@/pages/Settings"));
 
 export const Router = () => {
   return (
-    <Routes>
-      <Route path="/" element={<ProtectedRoute children={<AppLayout />} />}>
-        <Route index element={<Dashboard />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<>loading...</>}>
+      <Routes>
+        <Route path="/" element={<ProtectedRoute children={<AppLayout />} />}>
+          <Route index element={<Dashboard />} />
+          <Route path="dashboard/settings" element={<Settings />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 };
 

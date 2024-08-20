@@ -24,10 +24,10 @@ import { ChevronDownIcon24, ChevronUpIcon24 } from "@/assets/svg/arrows";
 // ** components
 import { Link } from "react-router-dom";
 import { Divider, Flex, TextView, Collapse, Grid, ContainerLayout } from "nordom-ui";
-import LazyImage from "../reusables/lazyImg/lazyImg";
-import CommunityChannels from "./components/communityChannels";
-import AuthenticatedFooter from "./components/authentificatedFooter";
-import UnauthenticatedFooter from "./components/unAuthentificatedFooter";
+import LazyImage from "../reusables/lazyImg/LazyImg";
+import CommunityChannels from "./components/CommunityChannels";
+import AuthenticatedFooter from "./components/AuthentificatedFooter";
+import UnauthenticatedFooter from "./components/UnAuthentificatedFooter";
 
 const FooterUI: React.FC<FooterContentT> = (props) => {
   const desktop = useDesktop();

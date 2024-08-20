@@ -11,10 +11,10 @@ import { getCoreRowModel, getFilteredRowModel, useReactTable } from "@tanstack/r
 import classes from "./dashboardAssetsUI.module.scss";
 
 // ** components
-import { DashboardAssetsUIProps, DashboardTableDataT } from "@/types/components/dashboard";
 import { ContainerLayout, Flex, Input, Table, TextView } from "nordom-ui";
-import DashboardAssetsUISkeleton from "./dashboardAssetsUI-skeleton";
-import { DashboardAssetsColumns } from "./dashboardAssetsColumns";
+import { DashboardAssetsUIProps, DashboardTableDataT } from "@/types/components/dashboard/dashboardProps";
+import { DashboardAssetsColumns } from "./DashboardTableColumns";
+import DashboardAssetsUISkeleton from "./DashboardTableUI-skeleton";
 
 const DashboardAssetsUI = ({
   value,

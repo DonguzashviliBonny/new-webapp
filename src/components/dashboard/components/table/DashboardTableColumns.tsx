@@ -6,7 +6,6 @@ import { ArrowDownRightIcon, ArrowUpRightIcon } from "@/assets/svg/arrows";
 import { useDesktop, useResponsive, useTablet } from "@/hooks";
 
 // ** types
-import { DashboardAssetI, DashboardAssetsColumnsProps } from "@/types/components/dashboard";
 
 // ** helpers
 import { toFixedNoRound } from "@/utils";
@@ -19,6 +18,7 @@ import { HoldingsColumn, TableHidableTitle } from "@/components/reusables/column
 
 // ** style
 import classes from "./dashboardAssetsUI.module.scss";
+import { DashboardAssetI, DashboardAssetsColumnsProps } from "@/types/components/dashboard/dashboardProps";
 
 export const DashboardAssetsColumns = ({
   sortObj,
@@ -201,8 +201,6 @@ export const DashboardAssetsColumns = ({
       size: isTablet ? 180 : undefined,
     }),
   ];
-
-  console.log(columns);
 
   const mobileColumns = columns.filter(
     (e: { accessorKey: string }) =>

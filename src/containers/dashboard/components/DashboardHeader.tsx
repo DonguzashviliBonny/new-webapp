@@ -1,11 +1,11 @@
 // ** types
-import { DashboardHeaderDetailsResT } from "@/api/types/dashboard";
+import { DashboardHeaderDetailsResT } from "@/api/types/responses/dashboard";
 
 // ** components
-import DashboardHeaderUI from "@/components/dashboard/components/header/dashboardHeaderUI";
+import DashboardHeaderUI from "@/components/dashboard/components/header/DashboardHeaderUI";
 
 // ** types
-import { DashboardHeaderProps } from "@/types/components/dashboard";
+import { DashboardHeaderProps } from "@/types/components/dashboard/dashboardProps";
 
 // ** hooks
 import { useState } from "react";

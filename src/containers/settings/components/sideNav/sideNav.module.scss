@@ -1,0 +1,39 @@
+@import "@/scss/helpers.scss";
+
+.asideNav {
+  position: sticky;
+  top: 66px;
+  width: 100%;
+  height: 248px;
+  max-width: 200px;
+  background: $nord950;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px 0 rgba(0, 17, 60, 0.03);
+  box-sizing: border-box;
+
+  @include media(mobile) {
+    max-width: unset;
+    height: fit-content;
+    overflow-x: auto;
+    border-radius: unset;
+    z-index: 5;
+    top: 56px;
+  }
+
+  .link {
+    padding: 9px 8px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    @include media(mobile) {
+      min-width: 122px;
+    }
+  }
+
+  .active {
+    background: rgba(0, 16, 58, 0.2);
+  }
+}

@@ -1,5 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { DashboardHeaderDetailsResT, GetDashboardAnnouncementsResI, GetDashboardAssetsResT } from "../types/dashboard";
+import {
+  DashboardHeaderDetailsResT,
+  GetDashboardAnnouncementsResI,
+  GetDashboardAssetsResT,
+} from "../types/responses/dashboard";
 import {
   getDashboardAnnouncementsService,
   getDashboardAssetsService,

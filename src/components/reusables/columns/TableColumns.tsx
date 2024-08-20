@@ -5,7 +5,7 @@ import { InvisibleIcon, VisibleIcon } from "@/assets/svg";
 import { useDesktop, useMobile, useTablet } from "@/hooks";
 
 // ** components
-import { DashboardTableDataT, HoldingsColumnProps, TableTitleProps } from "@/types/components/dashboard";
+import { DashboardTableDataT, HoldingsColumnProps, TableTitleProps } from "@/types/components/dashboard/dashboardProps";
 
 // ** helpers
 import { getFormattedUnhiddenAmount } from "@/utils";

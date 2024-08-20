@@ -1,6 +1,8 @@
 export const endpoints = {
   user: {
-    preferences: "user/initial-preferences",
+    GetInformation: "user",
+    GetPreferences: "user/initial-preferences",
+    GetSettingsVerificationLevel: "user/verification-levels",
   },
   dashboard: {
     GetDashboardProfile: "dashboard/profile",

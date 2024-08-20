@@ -7,10 +7,10 @@ import { useOidc } from "@/oidc/oidc";
 
 // ** components
 import { Flex } from "nordom-ui";
-import DashboardHeader from "./components/dashboardHeader";
-import DashboardPortfolio from "./components/dashboardPortfolio";
-import DashboardAssets from "./components/dashboardAssets";
-import DashboardAnnouncements from "@/components/dashboard/components/announcements/dashboardAnnouncementsUI";
+import DashboardHeader from "./components/DashboardHeader";
+import DashboardPortfolio from "./components/DashboardPortfolio";
+import DashboardAssets from "./components/DashboardTable";
+import DashboardAnnouncements from "@/components/dashboard/components/announcements/DashboardAnnouncementsUI";
 
 const DashboardContainer = () => {
   const {

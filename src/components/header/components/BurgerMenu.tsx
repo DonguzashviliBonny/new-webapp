@@ -2,7 +2,7 @@
 import classes from "../header.module.scss";
 
 // ** icons
-import CloseIcon from "@/assets/svg/close-icon-20.svg";
+import { CloseIcon20 } from "@/assets/svg";
 
 // ** components
 import { Divider, Flex, ButtonSecondary, ButtonPrimary, Card, TextView } from "nordom-ui";
@@ -38,7 +38,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ onCloseMenu }) => {
     <Card paddingBlock="24" paddingInline="16">
       <Flex direction="column" gap={4} className={classes.burger} data-testid="burger-menu">
         <Flex justify="flex-end">
-          <CloseIcon className={classes.closeIcon} onClick={onCloseMenu} />
+          <CloseIcon20 className={classes.closeIcon} onClick={onCloseMenu} />
         </Flex>
 
         <Flex direction="column">

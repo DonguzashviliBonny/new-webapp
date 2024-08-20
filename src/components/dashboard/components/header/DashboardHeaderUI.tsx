@@ -1,6 +1,5 @@
 // ** components
-import LazyImage from "@/components/reusables/lazyImg/lazyImg";
-import DashboardHeaderSkeleton from "./dashboardHeaderUI-skeleton";
+import LazyImage from "@/components/reusables/lazyImg/LazyImg";
 import {
   AlignT,
   ButtonSecondary,
@@ -24,11 +23,12 @@ import { useMobile, useResponsive, useTablet } from "@/hooks";
 import { useNavigate } from "react-router-dom";
 
 // ** types
-import { DashboardHeaderProps } from "@/types/components/dashboard";
 import { formatAmountToString } from "@/utils/format/format";
 
 // ** icons
 import { CopyIcon, InvisibleIcon, VisibleIcon } from "@/assets/svg";
+import DashboardHeaderSkeleton from "./DashboardHeaderUI-skeleton";
+import { DashboardHeaderProps } from "@/types/components/dashboard/dashboardProps";
 
 const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, hide }: DashboardHeaderProps) => {
   const navigate = useNavigate();

@@ -5,8 +5,12 @@ import { useDashboardAssetsReq } from "@/api/requests/dashboard";
 import { sortT } from "@/types/common";
 
 // ** components
-import DashboardAssetsUI from "@/components/dashboard/components/table/dashboardAssetsUI";
-import { ClickedColumnsT, DashboardAssetsUIProps, DashboardTableDataT } from "@/types/components/dashboard";
+import DashboardAssetsUI from "@/components/dashboard/components/table/DashboardTableUI";
+import {
+  ClickedColumnsT,
+  DashboardAssetsUIProps,
+  DashboardTableDataT,
+} from "@/types/components/dashboard/dashboardProps";
 
 // ** hooks
 import { useCallback, useState } from "react";

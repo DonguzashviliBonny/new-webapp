@@ -77,3 +77,5 @@ export interface CombinedBlogsI {
     data: StrapiT<{ Name: string }>[];
   };
 }
+
+export type VerificationLimitsT = { type: string; amount?: number };

@@ -2,15 +2,15 @@ import React from "react";
 
 // ** components
 import { TextView, Flex, ContainerLayout, DirectionT } from "nordom-ui";
-import DashboardPortfolioUISkeleton from "./dashboardPortfolioUI-skeleton";
 import DonutChart from "@/components/reusables/charts/DonutChart/DonutChart";
 import LineChart from "@/components/reusables/charts/LineChart/LineChart";
 
 // ** hooks
 import { useLaptop, useMobile, useResponsive } from "@/hooks";
+import DashboardPortfolioUISkeleton from "./DashboardPortfolioUI-skeleton";
+import { DashboardPortfolioProps } from "@/types/components/dashboard/dashboardProps";
 
 // ** types
-import { DashboardPortfolioProps } from "@/types/components/dashboard";
 
 const DashboardPortfolioUI: React.FC<DashboardPortfolioProps> = ({
   hovered,
