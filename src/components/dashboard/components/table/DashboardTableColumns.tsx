@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import { HoldingsColumn, TableHidableTitle } from "@/components/reusables/columns/TableColumns";
 
 // ** style
-import classes from "./dashboardAssetsUI.module.scss";
+import classes from "./dashboardTableUI.module.scss";
 import { DashboardAssetI, DashboardAssetsColumnsProps } from "@/types/components/dashboard/dashboardProps";
 
 export const DashboardAssetsColumns = ({

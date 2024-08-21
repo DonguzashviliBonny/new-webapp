@@ -7,5 +7,5 @@ export const useFooterContentReq = () => {
     queryFn: () => getFooterContentService(),
     enabled: true,
   });
-  return { data: data?.data.data, isLoading, error };
+  return { data: data?.data, isLoading, error };
 };

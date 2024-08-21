@@ -2,7 +2,7 @@ import { PaginationI, StrapiT } from "@/types/common";
 import { DashboardAssetI, PieChartI, PortfolioChartI } from "@/types/components/dashboard/dashboardProps";
 
 export interface DashboardHeaderDetailsResT {
-  readonly data?: {
+  readonly data: {
     readonly portfolioDetails: {
       readonly totalBalance: {
         readonly fiatBalance: number;

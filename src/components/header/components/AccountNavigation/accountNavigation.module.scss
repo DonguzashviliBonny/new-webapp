@@ -1,0 +1,42 @@
+@import "@/scss/helpers";
+
+.icons {
+  width: 40px;
+  height: 40px;
+}
+
+.dropItem {
+  padding: 8px 12px;
+  flex-grow: 1;
+  border-radius: 8px;
+  > * {
+    cursor: pointer;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
+  svg {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px;
+    path,
+    circle {
+      stroke: $nord400;
+    }
+  }
+
+  &:hover {
+    background-color: $nord850;
+    svg {
+      path,
+      circle {
+        stroke: $nord50;
+      }
+    }
+    span {
+      color: $nord50;
+    }
+  }
+}

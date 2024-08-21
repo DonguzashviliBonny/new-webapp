@@ -8,7 +8,7 @@ import { useMobile, useResponsive, useTablet } from "@/hooks";
 import { getCoreRowModel, getFilteredRowModel, useReactTable } from "@tanstack/react-table";
 
 // ** style
-import classes from "./dashboardAssetsUI.module.scss";
+import classes from "./dashboardTableUI.module.scss";
 
 // ** components
 import { ContainerLayout, Flex, Input, Table, TextView } from "nordom-ui";
@@ -16,7 +16,7 @@ import { DashboardAssetsUIProps, DashboardTableDataT } from "@/types/components/
 import { DashboardAssetsColumns } from "./DashboardTableColumns";
 import DashboardAssetsUISkeleton from "./DashboardTableUI-skeleton";
 
-const DashboardAssetsUI = ({
+const DashboardTableUI = ({
   value,
   tableData,
   handleChange,
@@ -100,4 +100,4 @@ const DashboardAssetsUI = ({
   );
 };
 
-export default DashboardAssetsUI;
+export default DashboardTableUI;

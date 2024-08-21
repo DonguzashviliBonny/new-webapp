@@ -5,7 +5,6 @@ import classes from "./Header.module.scss";
 
 // ** hooks
 import usePreferencesStore from "@/store/preferencesStore";
-import { useOidc } from "@/oidc/oidc";
 import { useDesktop, useLaptop, useTablet } from "@/hooks";
 
 // ** icons
@@ -16,21 +15,13 @@ import { headerLinks } from "@/assets/data/header";
 
 // ** components
 import { TextView, Flex, Card, ContainerLayout } from "nordom-ui";
-import UnauthenticatedHeader from "./components/UnauthentificatedHeader";
-import AuthenticatedHeader from "./components/AuthentificatedHeader";
-import MobileHeader from "./components/MobileHeader";
 
-const HeaderUI = () => {
-  const { isUserLoggedIn } = useOidc();
+const HeaderUI: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { theme } = usePreferencesStore();
 
   const tablet = useTablet();
   const laptop = useLaptop();
   const desktop = useDesktop();
-
-  const unAuthenticatedHeaderRenderer = () => {
-    if (tablet) return <UnauthenticatedHeader />;
-  };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.currentTarget.blur();
@@ -63,13 +54,7 @@ const HeaderUI = () => {
             {laptop && (
               <Flex>
                 {headerLinks.links.map((link, i) => (
-                  <Link
-                    to={link.to}
-                    className={`${classes.navBarLink}`}
-                    onClick={handleLinkClick}
-                    type="secondary"
-                    key={i}
-                  >
+                  <Link to={link.to} className={classes.navBarLink} onClick={handleLinkClick} type="secondary" key={i}>
                     <Card padding="20" bg_color="transparent">
                       <TextView size={16}>{link.label}</TextView>
                     </Card>
@@ -79,8 +64,7 @@ const HeaderUI = () => {
             )}
           </Flex>
           <Flex align="center" gap={8}>
-            {isUserLoggedIn ? <AuthenticatedHeader /> : unAuthenticatedHeaderRenderer()}
-            {!laptop && <MobileHeader />}
+            {children}
           </Flex>
         </Flex>
       </ContainerLayout>

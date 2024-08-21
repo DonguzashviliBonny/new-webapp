@@ -1,3 +1,4 @@
+import { DashboardHeaderDetailsResT } from "@/api/types/responses/dashboard";
 import { BalanceI, sortT, StrapiT } from "../../common";
 
 export interface DashboardAssetI {
@@ -32,7 +33,7 @@ export interface PortfolioChartI {
   readonly balance: number;
 }
 
-export type DashboardHeaderProps = {
+export type DashboardHeaderUIProps = {
   readonly estBalance?: BalanceI;
   readonly cryptoAsset: string;
   readonly handleHide: () => void;
@@ -40,7 +41,15 @@ export type DashboardHeaderProps = {
   readonly userDetails: { readonly avatarUri: string; readonly userName: string; readonly publicId: number | null };
 };
 
-export type DashboardPortfolioProps = {
+export type DashboardHeaderContainerProps = {
+  readonly data?: DashboardHeaderDetailsResT;
+};
+
+export type DashboardPortfolioContainerProps = {
+  readonly data?: DashboardHeaderDetailsResT;
+};
+
+export type DashboardPortfolioUIProps = {
   readonly hovered: number | null;
   readonly setHovered: React.Dispatch<React.SetStateAction<number | null>>;
   readonly lineChartData?: { time: string; value: number }[];

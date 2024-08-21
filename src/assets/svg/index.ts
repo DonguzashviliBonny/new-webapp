@@ -29,3 +29,6 @@ export { default as SearchIcon } from "./search-icon.svg?react";
 export { default as DebitCardIcon } from "./debit-card-icon.svg?react";
 export { default as FilterIcon24 } from "./filter-icon-24.svg?react";
 export { default as SecurityIcon } from "./security-icon.svg?react";
+export { default as PlusIcon } from "./plus-icon.svg?react";
+export { default as MinusIcon } from "./minus-icon.svg?react";
+export { default as FaqQuestionIcon } from "./FAQ-question-icon.svg?react";

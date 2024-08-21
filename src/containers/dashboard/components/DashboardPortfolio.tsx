@@ -2,13 +2,17 @@
 import DashboardPortfolioUI from "@/components/dashboard/components/portfolio/DashboardPortfolioUI";
 
 // ** types
-import { DashboardHeaderDetailsResT } from "@/api/types/responses/dashboard";
-import { DashboardPortfolioProps, PieChartI, PortfolioChartI } from "@/types/components/dashboard/dashboardProps";
+import {
+  DashboardPortfolioContainerProps,
+  DashboardPortfolioUIProps,
+  PieChartI,
+  PortfolioChartI,
+} from "@/types/components/dashboard/dashboardProps";
 
 // ** hooks
 import { useState } from "react";
 
-const DashboardPortfolio = ({ data }: DashboardHeaderDetailsResT) => {
+const DashboardPortfolio: React.FC<DashboardPortfolioContainerProps> = ({ data }) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   const sortPieChartData = (data?: PieChartI) => {
@@ -33,12 +37,12 @@ const DashboardPortfolio = ({ data }: DashboardHeaderDetailsResT) => {
     }));
   };
 
-  const dashboardPortfolioUIProps: DashboardPortfolioProps = {
+  const dashboardPortfolioUIProps: DashboardPortfolioUIProps = {
     handleMouseOver: (_, id) => setHovered(id),
     hovered,
     setHovered,
-    lineChartData: sortLineChartData(data?.portfolioDetails.portfolioChart),
-    pieChartData: sortPieChartData(data?.portfolioDetails.pieChart),
+    lineChartData: sortLineChartData(data?.data.portfolioDetails.portfolioChart),
+    pieChartData: sortPieChartData(data?.data.portfolioDetails.pieChart),
   };
 
   return <DashboardPortfolioUI {...dashboardPortfolioUIProps} />;

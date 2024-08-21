@@ -5,7 +5,7 @@ import { useResponsive, useTablet } from "@/hooks";
 import { ContainerLayout, Flex, Skeleton } from "nordom-ui";
 
 // ** style
-import classes from "./dashboardAssetsUI.module.scss";
+import classes from "./dashboardTableUI.module.scss";
 
 const DashboardAssetsUISkeleton = () => {
   const tablet = useTablet();

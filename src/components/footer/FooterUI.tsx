@@ -13,7 +13,7 @@ import { useResponsive } from "@/hooks";
 import { useOidc } from "@/oidc/oidc";
 
 // ** types
-import { FooterContentT } from "@/api/types/layout";
+import { FooterUIProps } from "@/types/components/layout/layoutProps";
 
 // ** data
 import { footerListData } from "@/assets/data/footer";
@@ -29,7 +29,7 @@ import CommunityChannels from "./components/CommunityChannels";
 import AuthenticatedFooter from "./components/AuthentificatedFooter";
 import UnauthenticatedFooter from "./components/UnAuthentificatedFooter";
 
-const FooterUI: React.FC<FooterContentT> = (props) => {
+const FooterUI: React.FC<FooterUIProps> = ({ data }) => {
   const desktop = useDesktop();
   const laptop = useLaptop();
   const tablet = useTablet();
@@ -42,7 +42,7 @@ const FooterUI: React.FC<FooterContentT> = (props) => {
 
   const certificatesImageWidth = useResponsive({ laptop: 73, tablet: 53, mobile: 51 });
 
-  const { channels, certificates, TitleChannels } = props.data.attributes;
+  const { channels, certificates, TitleChannels } = data.data.attributes;
 
   const { data: certificatesData } = certificates;
 
@@ -77,6 +77,7 @@ const FooterUI: React.FC<FooterContentT> = (props) => {
                     <TitleList title={title} list={list} key={title} />
                   ) : (
                     <Collapse
+                      key={title}
                       title={
                         <TextView size={tablet ? 20 : 16} weight="700">
                           {title}
@@ -91,7 +92,6 @@ const FooterUI: React.FC<FooterContentT> = (props) => {
                           </Link>
                         </Flex>
                       ))}
-                      key={title}
                       classNameTitle={`${classes.collapseTexts} ${classes.collapseTitle}`}
                       expandIcon={<ChevronDownIcon24 />}
                       expandedIcon={<ChevronUpIcon24 />}
@@ -105,7 +105,7 @@ const FooterUI: React.FC<FooterContentT> = (props) => {
                   {isUserLoggedIn ? (
                     <AuthenticatedFooter data={certificatesData} />
                   ) : (
-                    <UnauthenticatedFooter data={props.data} />
+                    <UnauthenticatedFooter data={data} />
                   )}
                   <CommunityChannels TitleChannels={TitleChannels} data={channels.data} />
                 </Flex>

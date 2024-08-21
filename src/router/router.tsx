@@ -3,6 +3,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import AppLayout from "../components/layout/app/AppLayout";
 import { lazy, ReactNode, Suspense, useEffect, useState } from "react";
 import { getOidc, useOidc } from "@/oidc/oidc";
+import Transactions from "@/containers/transactions/Transactions";
 
 // ** lazy loads
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
@@ -15,6 +16,9 @@ export const Router = () => {
         <Route path="/" element={<ProtectedRoute children={<AppLayout />} />}>
           <Route index element={<Dashboard />} />
           <Route path="dashboard/settings" element={<Settings />} />
+          <Route path="transactions" element={<Transactions />}>
+            <Route path=":action/:type/:currency" element={<>some</>} />
+          </Route>
         </Route>
       </Routes>
     </Suspense>

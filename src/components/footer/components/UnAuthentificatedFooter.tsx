@@ -10,9 +10,9 @@ import { useOidc } from "@/oidc/oidc";
 import { useResponsive } from "@/hooks";
 
 // ** types
-import { FooterContentT } from "@/api/types/layout";
+import { FooterUIProps } from "@/types/components/layout/layoutProps";
 
-const UnauthenticatedFooter: React.FC<FooterContentT> = (props) => {
+const UnauthenticatedFooter: React.FC<FooterUIProps> = (props) => {
   const laptop = useLaptop();
   const { isUserLoggedIn, login } = useOidc();
 
@@ -24,7 +24,7 @@ const UnauthenticatedFooter: React.FC<FooterContentT> = (props) => {
   const titleLevel: TextViewLevelT = useResponsive({ laptop: 32, mobile: 24 });
   const subtitleLevel: TextViewLevelT = useResponsive({ laptop: 16, mobile: 14 });
 
-  const { attributes } = props.data;
+  const { attributes } = props.data.data;
 
   const { Title, Subtitle, TitleSignIn, TitleSignUp } = attributes;
 

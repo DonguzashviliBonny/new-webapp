@@ -8,15 +8,12 @@ import { useLaptop } from "@/hooks";
 
 // ** components
 import { Flex, TextView } from "nordom-ui";
-import LazyImage from "@/components/reusables/lazyImg/lazyImg";
+import LazyImage from "@/components/reusables/lazyImg/LazyImg";
 
 // ** types
-import { footerChannelsT } from "@/api/types/layout";
+import { CommunityChannelsProps } from "@/types/components/layout/layoutProps";
 
-const CommunityChannels: React.FC<{ data: footerChannelsT[] } & { TitleChannels: string }> = ({
-  data,
-  TitleChannels,
-}) => {
+const CommunityChannels: React.FC<CommunityChannelsProps> = ({ data, TitleChannels }) => {
   const laptop = useLaptop();
 
   return (

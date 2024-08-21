@@ -4,11 +4,11 @@ import React from "react";
 import { useResponsive } from "@/hooks";
 
 // ** types
-import { AuthenticatedFooterProps } from "@/types/components/layout";
 
 // ** components
-import LazyImage from "@/components/reusables/lazyImg/lazyImg";
+import LazyImage from "@/components/reusables/lazyImg/LazyImg";
 import { Flex, TextView } from "nordom-ui";
+import { AuthenticatedFooterProps } from "@/types/components/layout/layoutProps";
 
 const AuthenticatedFooter: React.FC<AuthenticatedFooterProps> = ({ data }) => {
   const certificatesGaps = useResponsive({ laptop: 12, tablet: 20, mobile: 12 });

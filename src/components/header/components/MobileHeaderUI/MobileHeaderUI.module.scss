@@ -1,0 +1,24 @@
+@import "@/scss/helpers";
+
+.divider {
+  height: 18px;
+}
+
+.fixIcon {
+  height: 22px;
+  width: 22px;
+}
+
+.burger {
+  .closeIcon {
+    path {
+      stroke: $nord50;
+    }
+  }
+
+  .icon {
+    path {
+      stroke: $nord400;
+    }
+  }
+}

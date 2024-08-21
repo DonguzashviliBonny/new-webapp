@@ -4,12 +4,12 @@ export const navigateData = [
   {
     Icon: DepositIcon,
     title: "Deposit",
-    href: "/transactions/deposit",
+    href: "/transactions/deposit/crypto/btc",
   },
   {
     Icon: WithdrawIcon,
     title: "Withdraw",
-    href: "/transactions/withdraw",
+    href: "/transactions/withdraw/crypto/btc",
   },
   {
     Icon: ConvertIcon,

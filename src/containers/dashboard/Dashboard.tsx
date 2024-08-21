@@ -21,6 +21,7 @@ const DashboardContainer = () => {
   const { data: announcements } = useDashboardAnnouncementsReq();
 
   const layoutGap = useResponsive({ desktop: 64, laptop: 56, tablet: 48, mobile: 40 });
+  console.log(header);
 
   return (
     <Flex direction="column" justify="center" gap={layoutGap}>

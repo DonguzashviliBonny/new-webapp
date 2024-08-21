@@ -11,6 +11,7 @@ import {
   TextView,
   TextViewLevelT,
 } from "nordom-ui";
+import DashboardHeaderSkeleton from "./DashboardHeaderUI-skeleton";
 
 // ** data
 import { navigateData } from "@/assets/data/dashboard";
@@ -24,18 +25,37 @@ import { useNavigate } from "react-router-dom";
 
 // ** types
 import { formatAmountToString } from "@/utils/format/format";
+import { DashboardHeaderUIProps } from "@/types";
 
 // ** icons
 import { CopyIcon, InvisibleIcon, VisibleIcon } from "@/assets/svg";
-import DashboardHeaderSkeleton from "./DashboardHeaderUI-skeleton";
-import { DashboardHeaderProps } from "@/types/components/dashboard/dashboardProps";
 
-const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, hide }: DashboardHeaderProps) => {
+/**
+ * DashboardHeaderUI component displays user's details and balance. It also renders navigation links.
+ *
+ * @param {Object} props - The component props
+ * @param {Object} props.userDetails - The user's details
+ * @param {string} props.userDetails.avatarUri - The user's avatar URI
+ * @param {string} props.userDetails.userName - The user's name
+ * @param {number|null} props.userDetails.publicId - The user's public ID
+ * @param {Object} props.estBalance - The estimated balance
+ * @param {string} props.cryptoAsset - The crypto asset
+ * @param {Function} props.handleHide - The function to handle hiding balance
+ * @param {boolean} props.hide - Indicates whether to hide balance
+ * @returns {JSX.Element} The rendered component
+ */
+const DashboardHeaderUI: React.FC<DashboardHeaderUIProps> = (props) => {
+  const { userDetails, estBalance, cryptoAsset, handleHide, hide } = props;
+
+  // Destructure props
+  const { avatarUri, userName, publicId } = userDetails;
+
+  // Hooks
   const navigate = useNavigate();
-
   const isMobile = useMobile();
   const isTablet = useTablet();
 
+  // Responsive values
   const balanceFontSize: TextViewLevelT = useResponsive({ laptop: 20, tablet: 16, mobile: 14 });
   const navigationsFontSize: TextViewLevelT = useResponsive({ laptop: 14, tablet: 12, mobile: 14 });
   const containerAlign: AlignT = useResponsive({ mobile: "flex-start", tablet: "center" });
@@ -43,9 +63,10 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
   const containerGap = useResponsive({ mobile: 32, tablet: 0 });
   const userNameSize: TextViewLevelT = useResponsive({ mobile: 16, tablet: 20 });
 
-  const { avatarUri, userName, publicId } = userDetails;
-
-  if (!estBalance) return <DashboardHeaderSkeleton />;
+  // If estBalance is falsy, render skeleton
+  if (!estBalance) {
+    return <DashboardHeaderSkeleton />;
+  }
 
   return (
     <ContainerLayout bg_color="nord950" border_bottom padding={{ block: 24 }}>
@@ -56,9 +77,10 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
         justify="space-between"
         className={classes.content}
       >
+        {/* Render user's avatar, name, and public ID */}
         <Flex gap={12}>
           <div className={classes.profileImg}>
-            <LazyImage src={avatarUri} alt={"avatar"} />
+            <LazyImage src={avatarUri} alt="avatar" />
           </div>
 
           <Flex direction="column" gap={12}>
@@ -70,6 +92,7 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
               </Flex>
 
               <div className={classes.tagWrapper}>
+                {/* Render copy button */}
                 <Copy textToCopy={publicId ? publicId?.toString() : ""}>
                   <Tag className={classes.tagWrapper} bg_color="nord800" paddingInline="8" paddingBlock="4">
                     <Flex align="center" justify="center" gap={4}>
@@ -84,6 +107,7 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
               </div>
             </Flex>
 
+            {/* Render hide balance button */}
             <Flex onClick={handleHide} align="center" gap={4}>
               {hide ? (
                 <Flex align="center" justify="center" className={classes.hideBtnWrapper}>
@@ -94,8 +118,10 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
                   <VisibleIcon className={classes.hideBtn} />
                 </Flex>
               )}
+
+              {/* Render estimated balance */}
               <Flex align="center" gap={4}>
-                <TextView size={isMobile ? 14 : 16} color="nord400">
+                <TextView size={balanceFontSize} color="nord400">
                   {"Est."} Balance:
                 </TextView>
 
@@ -106,6 +132,7 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
                 </TextView>
               </Flex>
 
+              {/* Render estimated balance in crypto asset */}
               {!isMobile && (
                 <>
                   <TextView size={!isTablet ? 16 : 20} color="nord400">
@@ -124,6 +151,7 @@ const DashboardHeaderUI = ({ userDetails, estBalance, cryptoAsset, handleHide, h
           </Flex>
         </Flex>
 
+        {/* Render navigation links */}
         <Flex
           justify={isTablet ? undefined : "center"}
           align="center"

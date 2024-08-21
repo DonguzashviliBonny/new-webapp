@@ -12,11 +12,12 @@ import {
 import { QueryPaginationI } from "@/types/common";
 
 export const useDashboardHeaderReq = (token: string) => {
-  const { data, isLoading, error, ...rest } = useQuery<DashboardHeaderDetailsResT, Error>({
+  const { data, ...rest } = useQuery<DashboardHeaderDetailsResT, Error>({
     queryKey: ["useDashboardHeaderServiceReq"],
     queryFn: () => getDashboardDetailsService(token),
   });
-  return { data: data?.data, isLoading, error, rest };
+
+  return { data: data, ...rest };
 };
 
 export const useDashboardAssetsReq = (token: string, params: QueryPaginationI) => {
