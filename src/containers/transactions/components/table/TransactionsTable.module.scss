@@ -1,0 +1,89 @@
+@import "@/scss/helpers.scss";
+
+.headerWrapper {
+  > div {
+    padding: 20px 16px;
+    @include media(tablet) {
+      padding: 32px;
+    }
+    .header {
+      a {
+        color: $nord50;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 20px;
+        font-family: "Helvetica-700";
+
+        @include media(tablet) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        > svg {
+          margin-left: 6px;
+        }
+      }
+
+      span {
+        @include media(tablet) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+.tableLayout {
+  margin-bottom: 56px;
+
+  @include media(tablet) {
+    margin-bottom: 64px;
+  }
+
+  @include media(laptop) {
+    margin-bottom: 72px;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.transactionTable {
+  width: 100%;
+}
+
+.tableSkeleton {
+  background-color: $nord850 !important;
+  border: unset !important;
+  border-radius: 10px;
+  padding-inline: 24px !important;
+
+  thead {
+    th {
+      > div {
+        margin-top: 24px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        > div {
+          margin-bottom: 16px;
+        }
+      }
+      &:last-child {
+        td {
+          > div {
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+}

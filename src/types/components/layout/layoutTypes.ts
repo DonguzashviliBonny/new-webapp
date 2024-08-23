@@ -1,3 +1,5 @@
+import { StrapiT } from "@/types/common";
+
 export type footerChannelsT = {
   readonly id: number;
   readonly attributes: {
@@ -32,21 +34,25 @@ export type footerCertificatesT = {
 };
 
 export type GetCryptoFaqData = {
-  readonly data: {
-    readonly id: number;
-    readonly attributes: {
-      readonly Title: string;
-      readonly Subtitle: string;
-      readonly questions: {
-        readonly data: {
-          readonly id: number;
-          readonly attributes: {
-            readonly Title: string;
-            readonly Subtitle: string;
-          };
-        }[];
-      };
+  readonly data: StrapiT<{
+    readonly Title: string;
+    readonly Subtitle: string;
+    readonly createdAt: string;
+    readonly locale: string;
+    readonly localizations: {
+      readonly data: [];
     };
-  };
-  readonly meta: null;
+    readonly publishedAt: string;
+    readonly updatedAt: string;
+    readonly questions: {
+      readonly data: StrapiT<{
+        readonly Title: string;
+        readonly Subtitle: string;
+        readonly createdAt: string;
+        readonly locale: string;
+        readonly publishedAt: string;
+        readonly updatedAt: string;
+      }>[];
+    };
+  }>;
 };

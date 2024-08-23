@@ -1,5 +1,4 @@
 // ** components
-import { Flex } from "nordom-ui";
 import { Outlet } from "react-router-dom";
 import FooterContainer from "@/containers/footer/Footer";
 import Header from "@/containers/header/Header";
@@ -9,13 +8,13 @@ import classes from "./appLayout.module.scss";
 
 const AppLayout = () => {
   return (
-    <Flex direction="column" className={classes.appLayout}>
+    <div className={classes.appLayout}>
       <Header />
-      <Flex direction="column" className={classes.appContent}>
+      <div className={classes.appContent}>
         <Outlet />
-      </Flex>
+      </div>
       <FooterContainer />
-    </Flex>
+    </div>
   );
 };
 

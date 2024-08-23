@@ -91,7 +91,6 @@ const TransactionLayout: React.FC<TransactionLayoutProps> = ({ children, cryptoF
           </ContainerLayout>
         </Grid>
       </Flex>
-      <ContainerLayout>table</ContainerLayout>
       <TransactionFaqDrawer open={openFaq} setOpen={setOpenFaq} cryptoFaqData={cryptoFaqData} />
     </>
   );

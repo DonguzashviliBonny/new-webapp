@@ -9,6 +9,13 @@ export const endpoints = {
     GetDashboardAssets: "dashboard/my-assets",
     GetDashboardAnnouncements: "dashboard/announcements",
   },
+  transactions: {
+    GetTransactionFaq: (action: string, type: string) => `${action}/${type}/faq`,
+    GetTransactionTable: (action: string, type: string) => `${type}/${action}/transactions`,
+    GetTransactionAssets: (action: string, type: string) => `${type}/${action}/assets`,
+    GetNetworks: (network: string) => `crypto/networks/${network}`,
+    PostGetDepositAddress: (network: string) => `crypto/deposit/addresses/${network}`,
+  },
   footer: {
     GetFooterContent: `footer/content`,
   },

@@ -33,7 +33,7 @@ export type MobileHeaderUIProps = {
 
 export type TransactionLayoutProps = {
   children: React.ReactNode;
-  cryptoFaqData: GetCryptoFaqData;
+  cryptoFaqData?: GetCryptoFaqData;
   title: string;
   subtitle: string;
 };

@@ -79,3 +79,24 @@ export interface CombinedBlogsI {
 }
 
 export type VerificationLimitsT = { type: string; amount?: number };
+export type StatusT = "Completed" | "Pending" | "Failed";
+export type PaymentT = "Card" | "Bank" | "Cash";
+
+export type CurrencyT = {
+  readonly code: string;
+  readonly logoUrl: string;
+  readonly name: string;
+  readonly displayDecimalPoints: number;
+};
+
+export type NetworksT = {
+  name: string;
+  estimatedTime: number;
+  confirmations: number;
+};
+
+export interface AddressI {
+  address: string;
+  confirmations: number;
+  minAmount: number;
+}

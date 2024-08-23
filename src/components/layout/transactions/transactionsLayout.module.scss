@@ -2,7 +2,6 @@
 
 .depositContent {
   margin-block: 40px;
-  overflow: hidden;
 
   @include media(tablet) {
     margin-block: 48px;
@@ -109,21 +108,21 @@
           background-color: $nord800;
           position: absolute;
         }
-
-        .faqIconBtn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 40px;
-          width: 40px;
-          @include media(laptop) {
-            display: none;
-          }
-          svg {
-            flex-shrink: 0;
-          }
-        }
       }
+    }
+  }
+  .faqIconBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+    @include media(laptop) {
+      display: none;
+    }
+    svg {
+      flex-shrink: 0;
     }
   }
 

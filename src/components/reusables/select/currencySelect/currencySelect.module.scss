@@ -1,0 +1,30 @@
+@import "@/scss/helpers";
+
+.currencySelectLargeOverlay {
+  width: 100%;
+  right: 0;
+  top: 115%;
+  border-radius: 8px;
+  border: 1px solid $nord50;
+  background-color: $nord900;
+  padding: 12px;
+  max-height: 240px;
+  overflow-y: auto;
+  gap: 4px;
+
+  &_active {
+    border: 1px solid $nord50;
+  }
+}
+
+.currencySelectOption {
+  padding: 8px;
+  border-radius: 4px;
+  &:hover {
+    background-color: $nord800;
+  }
+  &.selected {
+    border: 1px solid $nord50;
+    background-color: $nord800;
+  }
+}

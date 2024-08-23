@@ -1,0 +1,9 @@
+@import "@/scss/helpers.scss";
+
+.depositCryptoWrapper {
+  padding: 32px 0 0;
+  width: 100%;
+  > div {
+    flex-grow: 1;
+  }
+}

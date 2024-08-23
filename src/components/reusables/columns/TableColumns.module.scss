@@ -1,0 +1,8 @@
+@import "@/scss/helpers";
+
+.copyIcon {
+  cursor: pointer;
+  path {
+    stroke: $nord400;
+  }
+}

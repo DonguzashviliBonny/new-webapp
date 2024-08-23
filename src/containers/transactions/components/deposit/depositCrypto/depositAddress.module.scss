@@ -1,0 +1,82 @@
+@import "@/scss/helpers.scss";
+
+.depositAddressCard {
+  min-height: 170px;
+}
+
+.loadingContent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addressInfo {
+  .addressBox {
+    flex-direction: column;
+
+    @include media(tablet) {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+    .qrWrapper {
+      width: min-content;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid $nord800;
+      background-color: $nord950;
+      margin-bottom: 12px;
+    }
+
+    .walletAddress {
+      width: 100%;
+    }
+
+    .addressWrapper {
+      justify-content: space-between;
+      border-radius: 8px;
+      border: 1px solid $nord800;
+      padding: 12px;
+      align-items: center;
+      width: 100%;
+
+      .addressBox {
+        svg {
+          cursor: pointer;
+        }
+
+        > span {
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-wrap: nowrap;
+          @include media(tablet) {
+            max-width: 175px;
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    margin-block: 16px;
+  }
+}
+
+.moreText {
+  margin-top: 16px;
+}
+
+.showMoreBtn {
+  margin-top: 16px;
+  cursor: pointer;
+
+  .arrowUp {
+    transform: rotate(180deg);
+  }
+
+  .dropdownArrow {
+    height: 20px;
+  }
+}
