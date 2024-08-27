@@ -1,4 +1,4 @@
-import { footerCertificatesT, footerChannelsT } from "@/types";
+import { footerCertificatesT, footerChannelsT } from "@/types/components/layout/layoutTypes";
 
 export interface FooterContentResT {
   readonly data: {

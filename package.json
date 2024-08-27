@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3000"
   },
   "dependencies": {
     "@microsoft/signalr": "^8.0.7",
@@ -17,7 +17,7 @@
     "axios": "^1.7.4",
     "date-fns": "^3.6.0",
     "lightweight-charts": "^4.2.0",
-    "nordom-ui": "^4.2.9",
+    "nordom-ui": "^4.4.4",
     "normalize.css": "^8.0.1",
     "notistack": "^3.0.1",
     "oidc-spa": "^5.1.2",

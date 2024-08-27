@@ -65,7 +65,7 @@ const SelectedOption: React.FC<{ name: string }> = ({ name }) => {
   return (
     <Flex direction="column" gap={4}>
       <TextView size={16} weight="400">
-        {name} ({name})
+        {name}
       </TextView>
     </Flex>
   );

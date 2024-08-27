@@ -1,25 +1,25 @@
 import { Flex, TabsPrimary } from "nordom-ui";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTransactionAssetReq } from "@/api/requests/transactions";
 import { useOidc } from "@/oidc/oidc";
 
 const urlObj = {
-  deposit: "withdraw",
-  withdraw: "deposit",
+  crypto: "fiat",
+  fiat: "crypto",
 };
 
 const TransactionTabsLayout = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { oidcTokens } = useOidc({ assertUserLoggedIn: true });
 
-  const url = window.location.pathname;
+  const url = location.pathname;
   const [action, type, asset] = url
     .split("/")
     .filter((el) => el.length > 0 && !el.toLowerCase().includes("transactions"));
   const { data, isLoading } = useTransactionAssetReq(oidcTokens.accessToken, type, action);
 
   const handleTabChange = (key: string) => {
-    const url = window.location.pathname;
     const oldValue = urlObj[key as keyof typeof urlObj];
 
     if (oldValue)
@@ -33,14 +33,15 @@ const TransactionTabsLayout = () => {
       <TabsPrimary
         size="small"
         onChange={handleTabChange}
+        active_tab={type}
         tabs={[
           {
-            title: "Deposit",
-            key: "deposit",
+            title: "Crypto",
+            key: "crypto",
           },
           {
-            key: "withdraw",
-            title: "Withdraw",
+            key: "fiat",
+            title: "Fiat",
           },
         ]}
       />

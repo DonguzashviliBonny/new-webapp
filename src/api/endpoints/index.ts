@@ -15,6 +15,8 @@ export const endpoints = {
     GetTransactionAssets: (action: string, type: string) => `${type}/${action}/assets`,
     GetNetworks: (network: string) => `crypto/networks/${network}`,
     PostGetDepositAddress: (network: string) => `crypto/deposit/addresses/${network}`,
+    PostWithdraw: "crypto/withdraw",
+    PostConfirmWithdraw: "crypto/withdraw/confirm",
   },
   footer: {
     GetFooterContent: `footer/content`,

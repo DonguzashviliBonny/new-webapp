@@ -1,5 +1,6 @@
 import { AddressI, NetworksT, PaginationI, StatusT } from "@/types";
 import { GetCryptoFaqData } from "@/types/components/layout/layoutTypes";
+import { withdrawTransactionT, transactionAssetType } from "@/types/components/transactions/transactionTypes";
 
 export type GetTransactionsFaqResT = GetCryptoFaqData;
 
@@ -32,18 +33,17 @@ export interface GetTransactionsFiatTableResI extends PaginationI {
 }
 
 export interface getTransactionAssetResI {
-  readonly data: {
-    readonly code: string;
-    readonly displayDecimalPoints: number;
-    readonly name: string;
-    readonly logoUrl: string;
-  }[];
+  readonly data: transactionAssetType[];
 }
 
 export interface getCryptoNetworksResI {
   readonly data: NetworksT[];
 }
 
-export interface GetDepositCryptoAddress {
+export interface GetDepositCryptoAddressResI {
   readonly data: AddressI;
+}
+
+export interface PostWithdrawCryptoResI {
+  readonly data: withdrawTransactionT;
 }

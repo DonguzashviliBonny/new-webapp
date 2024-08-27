@@ -11,7 +11,15 @@ import LazyImage from "../../lazyImg/LazyImg";
 
 // ** components
 
-const CurrencySelect: React.FC<CurrencySelectProps> = ({ data, onSelect, placeholder, value }) => {
+const CurrencySelect: React.FC<CurrencySelectProps> = ({
+  data,
+  onSelect,
+  placeholder,
+  value,
+  size,
+  noInitialBorder,
+  bg_color,
+}) => {
   const options: LabeledValueT[] = data.map((data) => ({
     extraData: {
       ...data,
@@ -21,8 +29,6 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({ data, onSelect, placeho
   }));
 
   const onSelectHandler = (option: LabeledValueT) => {
-    console.log(option);
-
     onSelect(option.content);
   };
 
@@ -30,6 +36,9 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({ data, onSelect, placeho
     <Select
       role="coin-select"
       options={options}
+      size={size}
+      noInitialBorder={noInitialBorder}
+      bg_color={bg_color}
       placeholder={
         <TextView size={16} weight="400">
           {placeholder}
@@ -82,7 +91,7 @@ const SelectedOption: React.FC<Omit<CurrencyT, "displayDecimalPoints">> = ({ cod
         {code}
       </TextView>
       <TextView size={16} weight="400" color="nord600">
-        ({name})
+        {name && `(${name})`}
       </TextView>
     </Flex>
   );

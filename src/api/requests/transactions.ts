@@ -1,14 +1,16 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import {
   getCryptoAddressService,
   getCryptoNetworksService,
   getTransactionAssetService,
   GetTransactionFaqService,
   getTransactionTableService,
+  postWithdrawConfirmService,
+  postWithdrawCryptoService,
 } from "../service/transactions";
-import { GetTransactionTableReqT } from "../types/requests/transaction";
+import { GetTransactionTableReqT, PostWithdrawReqT } from "../types/requests/transaction";
 import { AxiosError, AxiosResponse } from "axios";
-import { GetDepositCryptoAddress } from "../types/responses/transactions";
+import { GetDepositCryptoAddressResI } from "../types/responses/transactions";
 
 export const useTransactionFaqReq = (token: string, type: string, action: string) => {
   const response = useQuery({
@@ -53,11 +55,27 @@ export const useCryptoAddressReq = (
   method: "get" | "post" = "get",
   confirm?: boolean
 ) => {
-  const { data, ...rest } = useQuery<AxiosResponse<GetDepositCryptoAddress>, { response: AxiosError }>({
+  const { data, ...rest } = useQuery<AxiosResponse<GetDepositCryptoAddressResI>, { response: AxiosError }>({
     queryKey: ["useCryptoAddressReq", network, method],
     queryFn: () => getCryptoAddressService(token, network, method),
     enabled: method === "post" ? confirm : !!network,
   });
 
   return { data: data?.data, ...rest };
+};
+
+export const useWithdrawCryptoReq = () => {
+  const data = useMutation({
+    mutationFn: (variables: { token: string; filter: PostWithdrawReqT }) =>
+      postWithdrawCryptoService(variables.token, variables.filter),
+  });
+  return data;
+};
+
+export const useWithdrawConfrimReq = () => {
+  const data = useMutation({
+    mutationFn: (variables: { token: string; filter: PostWithdrawReqT }) =>
+      postWithdrawConfirmService(variables.token, variables.filter),
+  });
+  return data;
 };

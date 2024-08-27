@@ -4,6 +4,13 @@ export const formatAmountToString = (amount: string, decimalLimit?: number): str
   // Handle the case where the amount is "0"
   if (amount === "0") return "0";
 
+  // delete commas if exist
+  amount = formatReplaceComma(amount);
+  const reg = /^(\d+(\.\d*)?|\.\d+)?$/;
+
+  // test if we have incorrect character just delete it and make recursion for format
+  if (!reg.test(amount)) return formatAmountToString(amount.slice(0, amount.length - 1));
+
   // Remove leading zeros from the amount
   amount = amount.replace(/^0+(?=\d)/, "");
 
@@ -93,4 +100,8 @@ export const formatDate = (inputDate: string) => {
   if (day.length < 2) day = "0" + day;
 
   return `${year}.${month}.${day}`;
+};
+
+export const formatReplaceComma = (amount: string) => {
+  return amount.replace(/,/g, "");
 };

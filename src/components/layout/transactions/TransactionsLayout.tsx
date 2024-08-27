@@ -1,13 +1,15 @@
 import { FaqQuestionIcon, MinusIcon, PlusIcon } from "@/assets/svg";
-import { ButtonSecondary, Collapse, ContainerLayout, Flex, Grid, TextView } from "nordom-ui";
+import { ButtonSecondary, Collapse, ContainerLayout, Flex, Grid, TextView, TextViewLevelT } from "nordom-ui";
 import classes from "./transactionsLayout.module.scss";
 import { useResponsive } from "@/hooks";
 import { useState } from "react";
 import TransactionSkeleton from "./TransactionsLayout-skeleton";
 import TransactionFaqDrawer from "./components/TransactionsFaqDrawer";
 import { TransactionLayoutProps } from "@/types/components/layout/layoutProps";
+import { useLocation } from "react-router-dom";
 
 const TransactionLayout: React.FC<TransactionLayoutProps> = ({ children, cryptoFaqData, title, subtitle }) => {
+  const location = useLocation();
   const [openFaq, setOpenFaq] = useState<boolean>(false);
   const headerPaddings = useResponsive({
     mobile: { block: 16, inline: 16 },
@@ -16,6 +18,8 @@ const TransactionLayout: React.FC<TransactionLayoutProps> = ({ children, cryptoF
     desktop: { block: 24, inline: 32 },
   });
   const convertPaddings = useResponsive({ mobile: 16, tablet: 32 });
+  const titleSizes: TextViewLevelT = useResponsive({ mobile: 20, laptop: 24 });
+  const subtitleSizes: TextViewLevelT = useResponsive({ mobile: 14, tablet: 16 });
 
   const toggleFaqContent = () => {
     setOpenFaq((prev) => !prev);
@@ -36,10 +40,10 @@ const TransactionLayout: React.FC<TransactionLayoutProps> = ({ children, cryptoF
             >
               <Flex align="center" justify="space-between">
                 <Flex direction="column" gap={8}>
-                  <TextView size={20} weight="700" upperCase>
+                  <TextView size={titleSizes} weight="700" upperCase>
                     {title}
                   </TextView>
-                  <TextView size={14} color="nord400" weight="400">
+                  <TextView size={subtitleSizes} color="nord400" weight="400">
                     {subtitle}
                   </TextView>
                 </Flex>
@@ -82,7 +86,8 @@ const TransactionLayout: React.FC<TransactionLayoutProps> = ({ children, cryptoF
           <ContainerLayout
             border_bottom
             child_bg_color="nord950"
-            padding={convertPaddings}
+            // ** confirm have different layout so i do not need paddings
+            padding={!location.pathname.includes("confirm") ? convertPaddings : 0}
             className={classes.convertContainer}
           >
             <Flex gap={124} className={classes.depositContainerWrapper}>

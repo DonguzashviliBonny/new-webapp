@@ -8,7 +8,7 @@ import queryClient from "./api/client/queryClient.ts";
 import { BrowserRouter } from "react-router-dom";
 import "@/scss/global.scss";
 import { SnackbarProvider } from "notistack";
-import NotificationToast from "./components/reusables/toast/toast.tsx";
+import NotificationToast from "./components/reusables/toast/Toast.tsx";
 
 console.log("SnackbarProvider dasamatebelia");
 

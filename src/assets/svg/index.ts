@@ -32,3 +32,5 @@ export { default as SecurityIcon } from "./security-icon.svg?react";
 export { default as PlusIcon } from "./plus-icon.svg?react";
 export { default as MinusIcon } from "./minus-icon.svg?react";
 export { default as FaqQuestionIcon } from "./FAQ-question-icon.svg?react";
+export { default as WarningIcon } from "./warning-icon.svg?react";
+export { default as CheckIcon } from "./check-icon.svg?react";

@@ -12,3 +12,10 @@ export type GetTransactionFaqReqT = {
   readonly type: string;
   readonly action: string;
 };
+
+export type PostWithdrawReqT = {
+  readonly network: string;
+  readonly asset: string;
+  readonly address: string;
+  readonly amount: number;
+};

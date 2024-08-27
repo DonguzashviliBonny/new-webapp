@@ -19,6 +19,7 @@
     > div {
       border-right: 1px solid $nord800;
       border-left: 1px solid $nord800;
+      height: 100%;
       @include media(laptop) {
         border-right: unset;
         border-left: unset;
@@ -206,6 +207,7 @@
 .depositContainerWrapper {
   justify-content: space-between;
   align-items: flex-start;
+  height: 100%;
 
   @include media(tablet) {
     flex-direction: column-reverse;

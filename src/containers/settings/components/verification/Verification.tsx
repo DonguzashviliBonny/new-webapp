@@ -1,13 +1,16 @@
 import { useUserSettingsVerificationLevelReq } from "@/api/requests/user";
-import { LimitsT } from "@/api/types/user";
-import VerificationUI from "@/components/settings/components/verification/VerificationUI";
+// import VerificationUI from "@/components/settings/components/verification/VerificationUI";
 import VerificationSkeleton from "@/components/settings/components/verification/VerificationUI-skeleton";
-import { VerificationLimitsT } from "@/types";
-import { VerificationUIProps } from "@/types/components/settings";
+import { LimitsT, VerificationLimitsT } from "@/types";
+// import { VerificationUIProps } from "@/types/components/settings";
 import { useEffect, useState } from "react";
 
 const VerificationContainer = ({ token, isLoading }: { token: string; isLoading: boolean }) => {
-  const [limits, setLimits] = useState<VerificationLimitsT[][]>([
+  const [
+    ,
+    // limits
+    setLimits,
+  ] = useState<VerificationLimitsT[][]>([
     [
       { type: "Fiat Deposit Limits" },
       { type: "Fiat Withdrawal Limits" },
@@ -50,14 +53,15 @@ const VerificationContainer = ({ token, isLoading }: { token: string; isLoading:
 
   if (!data || isLoading) return <VerificationSkeleton />;
 
-  const props: VerificationUIProps = {
-    verification: data,
-    limits,
-    hashLinkClass: "",
-    hashLinkId: "",
-  };
+  // const props: VerificationUIProps = {
+  //   verification: data,
+  //   limits,
+  //   hashLinkClass: "",
+  //   hashLinkId: "",
+  // };
 
-  return <VerificationUI {...props} />;
+  // return <VerificationUI {...props} />;
+  return <>test</>;
 };
 
 export default VerificationContainer;

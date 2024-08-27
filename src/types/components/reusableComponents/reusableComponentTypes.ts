@@ -1,10 +1,9 @@
 import { CurrencyT, NetworksT } from "@/types/common";
-import { LabeledValueT } from "nordom-ui";
+import { LabeledValueT, SelectProps } from "nordom-ui";
 
-export interface CurrencySelectProps {
+export interface CurrencySelectProps extends Omit<SelectProps, "onSelect" | "value" | "options"> {
   data: CurrencyT[];
   onSelect: (option: string) => void;
-  placeholder: string | React.ReactNode;
   value?: CurrencyT;
 }
 
@@ -14,4 +13,12 @@ export type NetworkSelectProps = {
   onSelect: (option: LabeledValueT) => void;
   disabled?: boolean;
   placeholder: string | React.ReactNode;
+};
+
+export type StatusCardProps = {
+  loading?: boolean;
+  status: "pending" | "success" | "failed";
+  title: string;
+  subtitle: string;
+  btn: { text: string; onClick: () => void };
 };

@@ -6,14 +6,17 @@ import { getOidc, useOidc } from "@/oidc/oidc";
 // ** components
 import AppLayout from "../components/layout/app/AppLayout";
 import Loader from "@/components/reusables/loader/Loader";
-import TransactionTabsLayout from "@/components/layout/transactions/components/TransactionTabs";
-import DepositCrypto from "@/containers/transactions/components/deposit/depositCrypto/DepositCrypto";
 import WithdrawCrypto from "@/containers/transactions/components/withdraw/withdrawCrypto/WithdrawCrypto";
+import TransactionTabsLayout from "@/components/layout/transactions/components/TransactionTabs";
 
 // ** lazy loads
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const Settings = lazy(() => import("@/pages/Settings"));
 const Transactions = lazy(() => import("@/containers/transactions/Transactions"));
+const DepositCrypto = lazy(() => import("@/containers/transactions/components/deposit/depositCrypto/DepositCrypto"));
+const WithdrawConfirm = lazy(
+  () => import("@/containers/transactions/components/withdraw/WithdrawConfirm/WithdrawConfirm")
+);
 
 export const Router = () => {
   return (
@@ -29,9 +32,11 @@ export const Router = () => {
               <Route path=":id" element={<>send id</>} />
             </Route>
 
+            <Route path="withdraw/crypto/confirm/:id" element={<WithdrawConfirm />} />
+
             <Route path="withdraw" element={<TransactionTabsLayout />}>
               <Route path="crypto/:currency" element={<WithdrawCrypto />} />
-              <Route path="fiat/:currency" element={<>deposit/fiat</>} />
+              <Route path="fiat/:currency" element={<>withdraw/fiat</>} />
             </Route>
 
             <Route path="deposit" element={<TransactionTabsLayout />}>

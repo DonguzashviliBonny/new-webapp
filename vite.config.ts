@@ -62,4 +62,7 @@ export default defineConfig({
       include: ["src/**/*.ts", "src/**/*.tsx"],
     },
   },
+  server: {
+    port: 3000,
+  },
 });

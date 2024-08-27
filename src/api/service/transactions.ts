@@ -1,14 +1,15 @@
 import customParamsSerializer from "@/utils/format/customSerializer";
 import { axiosPrivateGateWay } from "../client";
 import { endpoints } from "../endpoints";
-import { GetTransactionFaqReqT, GetTransactionTableReqT } from "../types/requests/transaction";
+import { GetTransactionFaqReqT, GetTransactionTableReqT, PostWithdrawReqT } from "../types/requests/transaction";
 import { AxiosResponse } from "axios";
 import {
   getCryptoNetworksResI,
-  GetDepositCryptoAddress,
+  GetDepositCryptoAddressResI,
   getTransactionAssetResI,
   GetTransactionsFaqResT,
   GetTransactionsTableResT,
+  PostWithdrawCryptoResI,
 } from "../types/responses/transactions";
 
 export const GetTransactionFaqService = ({
@@ -60,8 +61,26 @@ export const getCryptoAddressService = (
   token: string,
   network: string,
   method: "get" | "post"
-): Promise<AxiosResponse<GetDepositCryptoAddress>> => {
+): Promise<AxiosResponse<GetDepositCryptoAddressResI>> => {
   const { PostGetDepositAddress } = endpoints.transactions;
   const httpRequest = axiosPrivateGateWay(token)[method](PostGetDepositAddress(network));
+  return httpRequest;
+};
+
+export const postWithdrawCryptoService = (
+  token: string,
+  data: PostWithdrawReqT
+): Promise<AxiosResponse<PostWithdrawCryptoResI>> => {
+  const { PostWithdraw } = endpoints.transactions;
+  const httpRequest = axiosPrivateGateWay(token).post(PostWithdraw, data);
+  return httpRequest;
+};
+
+export const postWithdrawConfirmService = (
+  token: string,
+  data: PostWithdrawReqT
+): Promise<AxiosResponse<PostWithdrawCryptoResI>> => {
+  const { PostConfirmWithdraw } = endpoints.transactions;
+  const httpRequest = axiosPrivateGateWay(token).post(PostConfirmWithdraw, data);
   return httpRequest;
 };

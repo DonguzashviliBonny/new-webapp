@@ -15,3 +15,21 @@ export type TransactionTabsOutletContextType = {
     readonly data: getTransactionAssetResI;
   };
 };
+
+export type transactionAssetType = {
+  readonly balance?: number;
+  readonly code: string;
+  readonly displayDecimalPoints: number;
+  readonly name: string;
+  readonly logoUrl: string;
+};
+
+export type withdrawTransactionT = {
+  readonly asset: string;
+  readonly address: string;
+  readonly network: string;
+  readonly amount: number;
+  readonly rate: number;
+  readonly fee: number;
+  readonly displayDecimalPoints: number;
+};

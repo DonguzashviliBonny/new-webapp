@@ -1,0 +1,51 @@
+@import "@/scss/helpers";
+
+.withdrawConfirm {
+  background-color: blue;
+  width: 100%;
+  .headerWrapper {
+    padding: 16px;
+
+    @include media(tablet) {
+      padding: 32px 32px 0;
+    }
+
+    @include media(laptop) {
+      padding: 26px 32px;
+    }
+  }
+
+  .detailsWrapper {
+    padding: 16px;
+
+    @include media(tablet) {
+      padding: 24px 32px 32px;
+    }
+    .warningBox {
+      background-color: $nordWarning10;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .btnWrapper {
+    margin-top: 40px;
+
+    .cancelBtn {
+      flex: 0.929;
+    }
+
+    .confirmBtn {
+      flex: 2.071;
+    }
+  }
+
+  .divider {
+    display: none;
+
+    @include media(laptop) {
+      display: flex;
+    }
+  }
+}

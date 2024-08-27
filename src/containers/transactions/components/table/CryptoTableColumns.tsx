@@ -54,8 +54,6 @@ const CryptoTableColumns = () => {
 
   const result = useResponsive({ mobile: mobileColumns, tablet: tabletColumns, laptop: columns });
 
-  console.log(result);
-
   return result;
 };
 
